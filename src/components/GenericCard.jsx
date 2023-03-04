@@ -1,7 +1,9 @@
-import React, { } from "react";
+import React, {useState } from "react";
 
 
 const GenericCard = ({cell},ref) => {
+
+  const [isClicked, setIsClicked] = useState(false);
 
   const {
     img,
@@ -28,7 +30,7 @@ const GenericCard = ({cell},ref) => {
   return (
     <div ref={ref} className="genericCard">
       {title && <h1>{title}</h1>}
-      <div className="genericCard__imgContainer">
+      <div className={`genericCard__imgContainer ${isClicked ? 'fullSize' : ''}`} onClick={() => setIsClicked(!isClicked)}>
         {img ? <img src={imgPath} alt="img"></img> : <p>Imagen no disponible</p>}
       </div>
       <div className="genericCard__description">
