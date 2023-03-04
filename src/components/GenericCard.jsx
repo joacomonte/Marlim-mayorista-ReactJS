@@ -22,7 +22,8 @@ const GenericCard = ({cell},ref) => {
     descuento4,
   } = cell;
 
-  const imgPath= `public/${img}`
+
+  const imgPath= `/${img}`
 
   return (
     <div ref={ref} className="genericCard">
