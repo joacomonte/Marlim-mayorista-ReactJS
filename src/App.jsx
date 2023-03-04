@@ -8,8 +8,7 @@ import fetchSheetData from "./helpers/fetchSheetData";
 import MenuTile from "./components/MenuTile";
 import LoadingCard from "./components/LoadingCard";
 
-// img
-import anodizado from "./assets/anodizado.png"
+
 
 
 export default function App() {
