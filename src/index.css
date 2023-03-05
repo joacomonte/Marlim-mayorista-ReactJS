@@ -165,13 +165,14 @@ body {
 }
 
 .navBar{
-  position: relative;
+  position: fixed;
   font-size: 1.25em;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   width: 100%;
+  background-color: #252525;
 }
 
 .navBar__img{
@@ -183,6 +184,9 @@ body {
 }
 
 
+.menuTilesContainer{
+  padding-top: 60px;
+}
 
 .menuTile{
   font-size: 1.25em;
@@ -329,7 +333,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: #393939;
+  background-color: #282828;
   transition: all 0.1s ease-in-out;
 }
 .sideMenu__titles__title:hover{

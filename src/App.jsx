@@ -131,40 +131,45 @@ export default function App() {
       </div>
 
 
-      {/* Sorbetes de colores - Alumino anodizado */}
-      <div onClick={() => aluminioRef.current.scrollIntoView()}>
-        <MenuTile bgcolor="#F2C819" cell={Array.isArray(cellValue) ? cellValue[0][0] : cellValue} />
-      </div>
-
-      {/* Sorbetes de acero inoxidable */}
-      <div onClick={() => inoxiRef.current.scrollIntoView()}>
-        <MenuTile bgcolor='#FF8734' cell={Array.isArray(cellValue) ? cellValue[1][0] : cellValue}/>
-      </div>
-
-      {/* Bombillas para mate */}
-      <div onClick={() => bombillasRef.current.scrollIntoView()} >
-        <MenuTile bgcolor='#E74741' cell={Array.isArray(cellValue) ? cellValue[2][0] : cellValue}/>
-      </div>
+      <div className="menuTilesContainer">
         
-      {/* Limpiador de cerda */}
-      <div onClick={() => limpiadorRef.current.scrollIntoView()} >
-        <MenuTile bgcolor='#FF8AC5' cell={Array.isArray(cellValue) ? cellValue[3][0] : cellValue}/>
+        {/* Sorbetes de colores - Alumino anodizado */}
+        <div onClick={() => aluminioRef.current.scrollIntoView()}>
+              <MenuTile bgcolor="#F2C819" cell={Array.isArray(cellValue) ? cellValue[0][0] : cellValue} />
+            </div>
+
+            {/* Sorbetes de acero inoxidable */}
+            <div onClick={() => inoxiRef.current.scrollIntoView()}>
+              <MenuTile bgcolor='#FF8734' cell={Array.isArray(cellValue) ? cellValue[1][0] : cellValue}/>
+            </div>
+
+            {/* Bombillas para mate */}
+            <div onClick={() => bombillasRef.current.scrollIntoView()} >
+              <MenuTile bgcolor='#E74741' cell={Array.isArray(cellValue) ? cellValue[2][0] : cellValue}/>
+            </div>
+              
+            {/* Limpiador de cerda */}
+            <div onClick={() => limpiadorRef.current.scrollIntoView()} >
+              <MenuTile bgcolor='#FF8AC5' cell={Array.isArray(cellValue) ? cellValue[3][0] : cellValue}/>
+            </div>
+              
+            {/* Estuche de viaje */}
+            <div onClick={() => estucheRef.current.scrollIntoView()} >
+              <MenuTile bgcolor='#ED12ED' cell={Array.isArray(cellValue) ? cellValue[4][0] : cellValue}/>
+            </div>
+            
+            {/* Exhibidores para góndola */}
+            <div onClick={() => gondolaRef.current.scrollIntoView()} >
+              <MenuTile bgcolor='#1A4BB2' cell={Array.isArray(cellValue) ? cellValue[5][0] : cellValue}/>
+            </div>
+            
+            {/* Exhibidores para mostrador */}
+            <div onClick={() => mostradorRef.current.scrollIntoView()} >
+              <MenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellValue) ? cellValue[6][0] : cellValue}/>
+            </div>
+
       </div>
-        
-      {/* Estuche de viaje */}
-      <div onClick={() => estucheRef.current.scrollIntoView()} >
-        <MenuTile bgcolor='#ED12ED' cell={Array.isArray(cellValue) ? cellValue[4][0] : cellValue}/>
-      </div>
-       
-      {/* Exhibidores para góndola */}
-      <div onClick={() => gondolaRef.current.scrollIntoView()} >
-        <MenuTile bgcolor='#1A4BB2' cell={Array.isArray(cellValue) ? cellValue[5][0] : cellValue}/>
-      </div>
-       
-      {/* Exhibidores para mostrador */}
-      <div onClick={() => mostradorRef.current.scrollIntoView()} >
-        <MenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellValue) ? cellValue[6][0] : cellValue}/>
-      </div>
+            
   
       <div className="cardsContainer">
 
