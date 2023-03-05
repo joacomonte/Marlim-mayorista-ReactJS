@@ -68,37 +68,58 @@ export default function App() {
             <div className="sideMenu__titles">
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => aluminioRef.current.scrollIntoView()}>
+                onClick={() => {
+                  handleMenuButtonClick();
+                  aluminioRef.current.scrollIntoView();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[0][0] : cellValue}
               </button>
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => inoxiRef.current.scrollIntoView()}>
+                onClick={() => {
+                  inoxiRef.current.scrollIntoView();
+                  handleMenuButtonClick();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[1][0] : cellValue}
               </button>
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => bombillasRef.current.scrollIntoView()}>
+                onClick={() => {
+                  bombillasRef.current.scrollIntoView();
+                  handleMenuButtonClick();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[2][0] : cellValue}
               </button>
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => limbuttoniadorRef.current.scrollIntoView()}>
+                onClick={() => {
+                  limpiadorRef.current.scrollIntoView();
+                  handleMenuButtonClick();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[3][0] : cellValue}
               </button>
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => estucheRef.current.scrollIntoView()}>
+                onClick={() => {
+                  estucheRef.current.scrollIntoView();
+                  handleMenuButtonClick();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[4][0] : cellValue}
               </button>
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => gondolaRef.current.scrollIntoView()}>
+                onClick={() => {
+                  gondolaRef.current.scrollIntoView();
+                  handleMenuButtonClick();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[5][0] : cellValue}
               </button>
               <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => mostradorRef.current.scrollIntoView()}>
+                onClick={() => {
+                  mostradorRef.current.scrollIntoView();
+                  handleMenuButtonClick();
+                }}>
                     {Array.isArray(cellValue) ? cellValue[6][0] : cellValue}
               </button>
 
