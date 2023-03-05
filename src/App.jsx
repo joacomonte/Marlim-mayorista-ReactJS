@@ -66,41 +66,41 @@ export default function App() {
               <img src={menuBurger}/>
             </div>
             <div className="sideMenu__titles">
-              <p 
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
                 onClick={() => aluminioRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[0][0] : cellValue}
-              </p>
-              <p 
+              </button>
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
                 onClick={() => inoxiRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[1][0] : cellValue}
-              </p>
-              <p 
+              </button>
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
                 onClick={() => bombillasRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[2][0] : cellValue}
-              </p>
-              <p 
+              </button>
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => limpiadorRef.current.scrollIntoView()}>
+                onClick={() => limbuttoniadorRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[3][0] : cellValue}
-              </p>
-              <p 
+              </button>
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
                 onClick={() => estucheRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[4][0] : cellValue}
-              </p>
-              <p 
+              </button>
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
                 onClick={() => gondolaRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[5][0] : cellValue}
-              </p>
-              <p 
+              </button>
+              <button 
                 className="sideMenu__titles__title"  style={{cursor:"pointer"}}
                 onClick={() => mostradorRef.current.scrollIntoView()}>
                     {Array.isArray(cellValue) ? cellValue[6][0] : cellValue}
-              </p>
+              </button>
 
             </div>
           </div>
