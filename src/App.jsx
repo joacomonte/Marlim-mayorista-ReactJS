@@ -9,7 +9,7 @@ import MenuTile from "./components/MenuTile";
 import LoadingCard from "./components/LoadingCard";
 
 // img
-import menuBurger from "../public/menuBurger.png"
+import menuBurger from "/menuBurger.png"
 
 
 
