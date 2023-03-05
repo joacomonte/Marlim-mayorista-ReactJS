@@ -80,7 +80,7 @@ li {
 /* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
-  background-color: #EFF8DE;
+  background-color: #252525;
 
 }
 
@@ -163,6 +163,26 @@ body {
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
+
+.navBar{
+  position: relative;
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.navBar__img{
+  position: absolute;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+
 
 .menuTile{
   font-size: 1.25em;
@@ -278,3 +298,43 @@ body {
   width: 100%;
 }
 
+
+/* SIDE MENU */
+
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: -600px;
+  width: 80vw;
+  max-width: 600px;
+  height: 100vh;
+  background-color: #1f1f1f;
+  transition: all 0.3s ease-in-out;
+}
+
+.sideMenu.active {
+  left: 0;
+}
+
+.sideMenu__titles{
+  margin-top: 20px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.sideMenu__titles__title{
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #393939;
+  transition: all 0.1s ease-in-out;
+}
+.sideMenu__titles__title:hover{
+  background-color: #1F1F1F;
+}
+
+
+/* SIDE MENU */

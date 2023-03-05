@@ -8,10 +8,19 @@ import fetchSheetData from "./helpers/fetchSheetData";
 import MenuTile from "./components/MenuTile";
 import LoadingCard from "./components/LoadingCard";
 
+// img
+import menuBurger from "../public/menuBurger.png"
+
 
 
 
 export default function App() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleMenuButtonClick() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   const aluminioRef = useRef();
   const inoxiRef = useRef();
@@ -43,6 +52,64 @@ export default function App() {
 
   return (
     <>
+      {/* Marlim */}
+
+
+
+      <div className="navBar"> MARLIM
+        <div className="navBar__img" onClick={handleMenuButtonClick}>
+          <img src={menuBurger}/>
+        </div>
+        <div className={`sideMenu ${isMenuOpen ? 'active' : ''}`}>
+          <div>
+            <div className="navBar__img" onClick={handleMenuButtonClick}>
+              <img src={menuBurger}/>
+            </div>
+            <div className="sideMenu__titles">
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => aluminioRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[0][0] : cellValue}
+              </p>
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => inoxiRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[1][0] : cellValue}
+              </p>
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => bombillasRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[2][0] : cellValue}
+              </p>
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => limpiadorRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[3][0] : cellValue}
+              </p>
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => estucheRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[4][0] : cellValue}
+              </p>
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => gondolaRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[5][0] : cellValue}
+              </p>
+              <p 
+                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+                onClick={() => mostradorRef.current.scrollIntoView()}>
+                    {Array.isArray(cellValue) ? cellValue[6][0] : cellValue}
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
       {/* Sorbetes de colores - Alumino anodizado */}
       <div onClick={() => aluminioRef.current.scrollIntoView()}>
         <MenuTile bgcolor="#F2C819" cell={Array.isArray(cellValue) ? cellValue[0][0] : cellValue} />
@@ -80,35 +147,38 @@ export default function App() {
   
       <div className="cardsContainer">
 
-{/* Sorbetes de colores - Alumino anodizado */}
+        {/* Sorbetes de colores - Alumino anodizado */}
         {Array.isArray(cellValue) ? 
-        (
-          <GenericCard 
-          ref={aluminioRef}
-          cell={{
-            img:"anodizado.png",
-            title: cellValue[9][0],
-            subtitle: cellValue[10][0],
-            modelo1: cellValue[11][0],
-            precio1: cellValue[11][1],
-            modelo2: cellValue[12][0],
-            precio2: cellValue[12][1],
-            modelo3: cellValue[13][0],
-            precio3: cellValue[13][1],
-            customize: cellValue[14][0],
-            customizePrice: cellValue[14][1],
-            // en comun
-            descuentosSubtitle: cellValue[17][0],
-            descuento1: cellValue[18][0],
-            descuento2: cellValue[19][0],
-            descuento3: cellValue[20][0],
-            descuento4: cellValue[21][0],
-          }}/>
-        )
-      :<LoadingCard/>}
+          (
+            <GenericCard 
+            ref={aluminioRef}
+            cell={{
+              img:"anodizado.png",
+              title: cellValue[9][0],
+              subtitle: cellValue[10][0],
+              modelo1: cellValue[11][0],
+              precio1: cellValue[11][1],
+              modelo2: cellValue[12][0],
+              precio2: cellValue[12][1],
+              modelo3: cellValue[13][0],
+              precio3: cellValue[13][1],
+              customize: cellValue[14][0],
+              customizePrice: cellValue[14][1],
+              // en comun
+              descuentosSubtitle: cellValue[17][0],
+              descuento1: cellValue[18][0],
+              descuento2: cellValue[19][0],
+              descuento3: cellValue[20][0],
+              descuento4: cellValue[21][0],
+            }}/>
+          )
+        :<LoadingCard/>}
+
+
+
       
 
-{/* inoxi */}
+        {/* inoxi */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -133,12 +203,12 @@ export default function App() {
             descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+        :<LoadingCard/>}
 
 
-{/* bombilla para mate */}
-      {Array.isArray(cellValue) ? 
-        (
+        {/* bombilla para mate */}
+        {Array.isArray(cellValue) ? 
+          (
           <GenericCard 
             ref={bombillasRef}
             cell={{
@@ -161,9 +231,9 @@ export default function App() {
             descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+        :<LoadingCard/>}
 
-{/* limpiador */}
+        {/* limpiador */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -186,9 +256,9 @@ export default function App() {
             descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+        :<LoadingCard/>}
 
-{/* estuche de viaje */}
+        {/* estuche de viaje */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -212,10 +282,10 @@ export default function App() {
             descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+        :<LoadingCard/>}
 
 
-{/* exhib cartulina 10 sorbetes */}
+        {/* exhib cartulina 10 sorbetes */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -239,10 +309,10 @@ export default function App() {
             // descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+        :<LoadingCard/>}
 
 
-{/* exhib cartulina 4 sorbetes */}
+        {/* exhib cartulina 4 sorbetes */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -266,10 +336,10 @@ export default function App() {
             // descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+        :<LoadingCard/>}
 
 
-{/* exhib cartulina 10 bombi */}
+        {/* exhib cartulina 10 bombi */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -293,11 +363,11 @@ export default function App() {
             // descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+       :<LoadingCard/>}
 
 
 
-{/* Exhibidor fibrofácil granel */}
+        {/* Exhibidor fibrofácil granel */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -321,11 +391,11 @@ export default function App() {
             // descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+       :<LoadingCard/>}
 
 
 
-{/* Exhibidor fibrofácil kit */}
+        {/* Exhibidor fibrofácil kit */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -349,11 +419,11 @@ export default function App() {
             // descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+       :<LoadingCard/>}
 
 
 
-{/* Exhibidor fibrofácil completo */}
+        {/* Exhibidor fibrofácil completo */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -377,11 +447,11 @@ export default function App() {
             // descuento4: cellValue[21][0],
           }}/>
         )
-      :<LoadingCard/>}
+       :<LoadingCard/>}
 
 
 
-{/* Exhibidor fibrofácil premium */}
+        {/* Exhibidor fibrofácil premium */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
