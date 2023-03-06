@@ -40,7 +40,7 @@ export default function App() {
   }
   
   useEffect(() => {
-    fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'hoja1', import.meta.env.VITE_API_KEY)
+    fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Catalogo', import.meta.env.VITE_API_KEY)
       .then((data) => {
         if (data.values && data.values.length > 0) {
           setCellValue(data.values);

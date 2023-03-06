@@ -4,6 +4,7 @@ const fetchSheetData = async (sheetID, range, apiKey) => {
     );
     const data = await response.json();
     console.log("has been fetched")
+    console.log(data)
     return data;
   };
   
