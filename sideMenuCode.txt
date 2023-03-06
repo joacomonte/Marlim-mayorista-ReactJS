@@ -1,0 +1,85 @@
+
+// const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
+// function toogleSideMenu() {
+//   setIsMenuOpen(!isMenuOpen);
+// }
+      
+{/* <div className="navBar__menuBtn" onClick={toogleSideMenu}>
+  <img src={menuBurger}/>
+</div> */}
+
+{/* <div className={`sideMenu ${isMenuOpen ? 'active' : ''}`}>
+
+  <div>
+    <div className="navBar__menuBtn" onClick={toogleSideMenu}>
+      <img src={menuBurger}/>
+    </div>
+
+    <div className="sideMenu__titles">
+      <button className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+              onClick={() => {
+                scrollWithOffset(aluminioRef)
+                toogleSideMenu();}}>
+        {Array.isArray(cellValue) ? cellValue[0][0] : cellValue}
+      </button>
+
+      <button 
+        className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+        onClick={() => {
+          scrollWithOffset(inoxiRef)
+          toogleSideMenu();
+        }}>
+            {Array.isArray(cellValue) ? cellValue[1][0] : cellValue}
+      </button>
+
+      <button 
+        className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+        onClick={() => {
+          scrollWithOffset(bombillasRef)
+          toogleSideMenu();
+        }}>
+            {Array.isArray(cellValue) ? cellValue[2][0] : cellValue}
+      </button>
+
+      <button 
+        className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+        onClick={() => {
+          scrollWithOffset(limpiadorRef)
+          toogleSideMenu();
+        }}>
+            {Array.isArray(cellValue) ? cellValue[3][0] : cellValue}
+      </button>
+
+      <button 
+        className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+        onClick={() => {
+          scrollWithOffset(estucheRef)
+          toogleSideMenu();
+        }}>
+            {Array.isArray(cellValue) ? cellValue[4][0] : cellValue}
+      </button>
+
+      <button 
+        className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+        onClick={() => {
+          scrollWithOffset(gondolaRef)
+          toogleSideMenu();
+        }}>
+            {Array.isArray(cellValue) ? cellValue[5][0] : cellValue}
+      </button>
+
+      <button 
+        className="sideMenu__titles__title"  style={{cursor:"pointer"}}
+        onClick={() => {
+          scrollWithOffset(mostradorRef)
+          toogleSideMenu();
+        }}>
+            {Array.isArray(cellValue) ? cellValue[6][0] : cellValue}
+      </button>
+
+    </div>
+
+  </div>
+
+</div> */}

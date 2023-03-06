@@ -1,7 +1,17 @@
 import React, {useState } from "react";
 
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Pagination } from "swiper";
+
+
 
 const GenericCard = ({cell},ref) => {
+
 
   const [isClicked, setIsClicked] = useState(false);
 
@@ -25,14 +35,30 @@ const GenericCard = ({cell},ref) => {
   } = cell;
 
 
-  const imgPath= `/${img}`
+
 
   return (
-    <div ref={ref} className="genericCard">
+    <div ref={ref} className="genericCard" name="toHere">
       {title && <h1>{title}</h1>}
-      <div className={`genericCard__imgContainer ${isClicked ? 'fullSize' : ''}`} onClick={() => setIsClicked(!isClicked)}>
-        {img ? <img src={imgPath} alt="img"></img> : <p>Imagen no disponible</p>}
+
+      { img && img.length > 1 &&
+        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          {img.map((src, index) => (
+            <SwiperSlide key={index}>
+              <div className="genericCard__imgContainer" onClick={() => setIsClicked(!isClicked)}>
+                {src ? <img src={`/${src}`} alt="img"></img> : <p>Imagen no disponible</p>}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      }
+
+      {img && img.length === 1 &&
+      <div className="genericCard__imgContainer" onClick={() => setIsClicked(!isClicked)}>
+            {img[0] ? <img src={`/${img[0]}`} alt="img"></img> : <p>Imagen no disponible</p>}
       </div>
+      }
+
       <div className="genericCard__description">
         {subtitle && <h2>{subtitle}</h2>}
         {modelo1 && precio1 && <p>{modelo1}: {precio1}</p>}

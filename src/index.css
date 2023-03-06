@@ -44,6 +44,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: baseline;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight on mobile tap */
 }
 
 /* Evitamos problemas con las imagenes */
@@ -166,26 +167,26 @@ body {
 
 .navBar{
   position: fixed;
-  font-size: 1.25em;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   width: 100%;
   background-color: #252525;
+  z-index: 2;
 }
 
-.navBar__img{
-  position: absolute;
-  left: 20px;
-  width: 40px;
-  height: 40px;
+
+.navBar__tortuLogoContainer{
+  margin-top: -10px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
 
 .menuTilesContainer{
-  padding-top: 60px;
+  padding-top: 61px;
 }
 
 .menuTile{
@@ -256,7 +257,6 @@ body {
   align-items: center;
   text-align: center;
 
-
   padding: 30px;
   color:black;
   width: 90%;
@@ -264,7 +264,6 @@ body {
   min-height: 500px;
   background-color: white;
   border-radius: 15px;
-
   margin: 50px 0px;
 }
 
@@ -302,10 +301,27 @@ body {
   width: 100%;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* .navBar__menuBtn{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+} */
 
 /* SIDE MENU */
 
-.sideMenu {
+
+/* .sideMenu {
   position: fixed;
   top: 0;
   left: -600px;
@@ -315,20 +331,18 @@ body {
   background-color: #1f1f1f;
   transition: all 0.3s ease-in-out;
 }
-
 .sideMenu.active {
   left: 0;
 }
 
 .sideMenu__titles{
-  margin-top: 20px;
   padding-top: 60px;
   display: flex;
   flex-direction: column;
 
-}
+} */
 
-.sideMenu__titles__title{
+/* .sideMenu__titles__title{
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -338,7 +352,7 @@ body {
 }
 .sideMenu__titles__title:hover{
   background-color: #1F1F1F;
-}
+} */
 
 
 /* SIDE MENU */

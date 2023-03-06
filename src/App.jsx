@@ -1,50 +1,57 @@
 // React Imports
 import React, { useState, useEffect, useRef } from "react";
-import GenericCard from "./components/GenericCard";
 
+//helpers
 import fetchSheetData from "./helpers/fetchSheetData";
 
 // components
 import MenuTile from "./components/MenuTile";
 import LoadingCard from "./components/LoadingCard";
-
-// img
-import menuBurger from "/menuBurger.png"
-
+import GenericCard from "./components/GenericCard";
 
 
 
 export default function App() {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
-  function handleMenuButtonClick() {
-    setIsMenuOpen(!isMenuOpen);
-  }
 
-  const aluminioRef = useRef();
-  const inoxiRef = useRef();
-  const bombillasRef = useRef();
-  const limpiadorRef = useRef();
-  const estucheRef = useRef();
-  const gondolaRef = useRef();
+
+  // default value before fetch
+  const [cellValue, setCellValue] = useState('Cargando...');
+
+  //useRefs
+  const aluminioRef = useRef(); 
+  const inoxiRef = useRef(); 
+  const bombillasRef = useRef(); 
+  const limpiadorRef = useRef(); 
+  const estucheRef = useRef(); 
+  const gondolaRef = useRef(); 
   const mostradorRef = useRef();
 
-  const [cellValue, setCellValue] = useState('Loading...');
+
+
+
+  // scrolls to the ref and then does a top margin correction
+  function scrollWithOffset(argRef) {
+    argRef.current.scrollIntoView();
+    setTimeout(()=>  {window.scrollBy(0, -100)}, 700)
+  }
   
   useEffect(() => {
     fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'hoja1', import.meta.env.VITE_API_KEY)
       .then((data) => {
         if (data.values && data.values.length > 0) {
           setCellValue(data.values);
-          // log the value after it's been fetched and set in state
         } else {
-          setCellValue('No data available');
+          setCellValue('Dato no disponible');
         }
       })
       .catch((error) => {
         console.error(error);
-        setCellValue('Error loading data');
+        setCellValue('Error al cargar datos');
       });
 
   }, []);
@@ -56,115 +63,44 @@ export default function App() {
 
 
 
-      <div className="navBar"> MARLIM
-        <div className="navBar__img" onClick={handleMenuButtonClick}>
-          <img src={menuBurger}/>
-        </div>
-        <div className={`sideMenu ${isMenuOpen ? 'active' : ''}`}>
-          <div>
-            <div className="navBar__img" onClick={handleMenuButtonClick}>
-              <img src={menuBurger}/>
-            </div>
-            <div className="sideMenu__titles">
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  handleMenuButtonClick();
-                  aluminioRef.current.scrollIntoView();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[0][0] : cellValue}
-              </button>
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  inoxiRef.current.scrollIntoView();
-                  handleMenuButtonClick();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[1][0] : cellValue}
-              </button>
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  bombillasRef.current.scrollIntoView();
-                  handleMenuButtonClick();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[2][0] : cellValue}
-              </button>
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  limpiadorRef.current.scrollIntoView();
-                  handleMenuButtonClick();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[3][0] : cellValue}
-              </button>
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  estucheRef.current.scrollIntoView();
-                  handleMenuButtonClick();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[4][0] : cellValue}
-              </button>
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  gondolaRef.current.scrollIntoView();
-                  handleMenuButtonClick();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[5][0] : cellValue}
-              </button>
-              <button 
-                className="sideMenu__titles__title"  style={{cursor:"pointer"}}
-                onClick={() => {
-                  mostradorRef.current.scrollIntoView();
-                  handleMenuButtonClick();
-                }}>
-                    {Array.isArray(cellValue) ? cellValue[6][0] : cellValue}
-              </button>
-
-            </div>
-          </div>
-
-        </div>
-
+      <div className="navBar"> 
+        <div className="navBar__tortuLogoContainer"> <img src="/logoTortu.png" onClick={() => window.scrollTo(0, 0)}></img> </div>
       </div>
-
 
       <div className="menuTilesContainer">
         
         {/* Sorbetes de colores - Alumino anodizado */}
-        <div onClick={() => aluminioRef.current.scrollIntoView()}>
+          <div onClick={ () =>  scrollWithOffset(aluminioRef)}>
               <MenuTile bgcolor="#F2C819" cell={Array.isArray(cellValue) ? cellValue[0][0] : cellValue} />
             </div>
 
             {/* Sorbetes de acero inoxidable */}
-            <div onClick={() => inoxiRef.current.scrollIntoView()}>
+            <div onClick={ () =>  scrollWithOffset(inoxiRef)}>
               <MenuTile bgcolor='#FF8734' cell={Array.isArray(cellValue) ? cellValue[1][0] : cellValue}/>
             </div>
 
             {/* Bombillas para mate */}
-            <div onClick={() => bombillasRef.current.scrollIntoView()} >
+            <div onClick={ () =>  scrollWithOffset(bombillasRef)}>
               <MenuTile bgcolor='#E74741' cell={Array.isArray(cellValue) ? cellValue[2][0] : cellValue}/>
             </div>
               
             {/* Limpiador de cerda */}
-            <div onClick={() => limpiadorRef.current.scrollIntoView()} >
+            <div onClick={ () =>  scrollWithOffset(limpiadorRef)}>
               <MenuTile bgcolor='#FF8AC5' cell={Array.isArray(cellValue) ? cellValue[3][0] : cellValue}/>
             </div>
               
             {/* Estuche de viaje */}
-            <div onClick={() => estucheRef.current.scrollIntoView()} >
+            <div onClick={ () =>  scrollWithOffset(estucheRef)}>
               <MenuTile bgcolor='#ED12ED' cell={Array.isArray(cellValue) ? cellValue[4][0] : cellValue}/>
             </div>
             
             {/* Exhibidores para góndola */}
-            <div onClick={() => gondolaRef.current.scrollIntoView()} >
+            <div onClick={ () =>  scrollWithOffset(gondolaRef)}>
               <MenuTile bgcolor='#1A4BB2' cell={Array.isArray(cellValue) ? cellValue[5][0] : cellValue}/>
             </div>
             
             {/* Exhibidores para mostrador */}
-            <div onClick={() => mostradorRef.current.scrollIntoView()} >
+            <div onClick={ () =>  scrollWithOffset(mostradorRef)}>
               <MenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellValue) ? cellValue[6][0] : cellValue}/>
             </div>
 
@@ -179,7 +115,8 @@ export default function App() {
             <GenericCard 
             ref={aluminioRef}
             cell={{
-              img:"anodizado.png",
+              
+              img:["anodizado.png","bombillas.png", "inoxi.png"],
               title: cellValue[9][0],
               subtitle: cellValue[10][0],
               modelo1: cellValue[11][0],
@@ -199,9 +136,6 @@ export default function App() {
             }}/>
           )
         :<LoadingCard/>}
-
-
-
       
 
         {/* inoxi */}
@@ -210,7 +144,7 @@ export default function App() {
           <GenericCard 
           ref={inoxiRef}
           cell={{
-            img:"inoxi.png",
+            img:["inoxi.png"],
             title: cellValue[24][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[25][0],
@@ -232,13 +166,15 @@ export default function App() {
         :<LoadingCard/>}
 
 
+
+
         {/* bombilla para mate */}
         {Array.isArray(cellValue) ? 
           (
           <GenericCard 
             ref={bombillasRef}
             cell={{
-            img:"bombillas.png",
+            img:["bombillas.png"],
             title: cellValue[32][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[33][0],
@@ -265,6 +201,7 @@ export default function App() {
           <GenericCard 
             ref={limpiadorRef}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[36][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[37][0],
@@ -290,6 +227,7 @@ export default function App() {
           <GenericCard 
             ref={estucheRef}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[40][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[41][0],
@@ -301,11 +239,11 @@ export default function App() {
             customize: cellValue[44][0],
             customizePrice: cellValue[44][1],
             // en comun
-            descuentosSubtitle: cellValue[17][0],
-            descuento1: cellValue[18][0],
-            descuento2: cellValue[19][0],
-            descuento3: cellValue[20][0],
-            descuento4: cellValue[21][0],
+            // descuentosSubtitle: cellValue[17][0],
+            // descuento1: cellValue[18][0],
+            // descuento2: cellValue[19][0],
+            // descuento3: cellValue[20][0],
+            // descuento4: cellValue[21][0],
           }}/>
         )
         :<LoadingCard/>}
@@ -317,6 +255,7 @@ export default function App() {
           <GenericCard 
             ref={gondolaRef}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[48][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[49][0],
@@ -344,6 +283,7 @@ export default function App() {
           <GenericCard 
             ref={mostradorRef}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[53][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[54][0],
@@ -371,6 +311,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[58][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[59][0],
@@ -399,6 +340,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[63][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[64][0],
@@ -427,6 +369,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[68][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[70][0],
@@ -455,6 +398,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[73][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[74][0],
@@ -483,6 +427,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
+            img:["bombillas.png"],
             title: cellValue[78][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[79][0],
@@ -503,23 +448,7 @@ export default function App() {
         )
       :<LoadingCard/>}
 
-
       </div>
     </>
   );
 }
-
-// // helpers
-// import fetchSheetData from "./helpers/fetchSheetData";
-
-// const SPREADSHEET_ID = import.meta.env.VITE_SPREADSHEET_ID;
-// const API_KEY = import.meta.env.VITE_API_KEY;
-// const RANGE = "hoja1!C1"; // The cell you want to retrieve
-
-// const [cellValues, setCellValues] = useState([]);
-
-// useEffect(() => {
-//   fetchSheetData(SPREADSHEET_ID, RANGE, API_KEY)
-//     .then((data) => setCellValues(JSON.stringify(data, null, 2)))
-//     .catch((error) => console.error(error));
-// }, []);
