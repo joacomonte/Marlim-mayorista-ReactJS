@@ -102,7 +102,7 @@ export default function App() {
 
             {/* Personalizaciones */}
             <div onClick={ () =>  scrollWithOffset(mostradorRef)}>
-              <MenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellValue) ? cellValue[7][0] : cellValue}/>
+              <MenuTile bgcolor='#72C765' cell={Array.isArray(cellValue) ? cellValue[7][0] : cellValue}/>
             </div>
 
       </div>
