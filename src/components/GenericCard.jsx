@@ -43,13 +43,17 @@ const GenericCard = ({cell},ref) => {
 
       { img && img.length > 1 &&
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+        
           {img.map((src, index) => (
+
             <SwiperSlide key={index}>
               <div className="genericCard__imgContainer" onClick={() => setIsClicked(!isClicked)}>
                 {src ? <img src={`/${src}`} alt="img"></img> : <p>Imagen no disponible</p>}
               </div>
             </SwiperSlide>
+
           ))}
+          
         </Swiper>
       }
 

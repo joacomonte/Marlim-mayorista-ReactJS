@@ -448,6 +448,35 @@ export default function App() {
         )
       :<LoadingCard/>}
 
+
+
+        {/* Personalizacion */}
+        {Array.isArray(cellValue) ? 
+        (
+          <GenericCard 
+            // ref={sinref}
+            cell={{
+            img:["bombillas.png"],
+            title: cellValue[82][0],
+            // subtitle: cellValue[10][0],
+            modelo1: cellValue[83][0],
+            precio1: cellValue[83][1],
+            modelo2: cellValue[84][0],
+            precio2: cellValue[84][1],
+            modelo3: cellValue[85][0],
+            precio3: cellValue[85][1],
+            // customize: cellValue[44][0],
+            // customizePrice: cellValue[44][1],
+            // // en comun
+            // descuentosSubtitle: cellValue[17][0],
+            // descuento1: cellValue[18][0],
+            // descuento2: cellValue[19][0],
+            // descuento3: cellValue[20][0],
+            // descuento4: cellValue[21][0],
+          }}/>
+        )
+      :<LoadingCard/>}
+
       </div>
     </>
   );
