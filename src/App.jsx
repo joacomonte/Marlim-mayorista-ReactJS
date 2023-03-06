@@ -40,7 +40,7 @@ export default function App() {
   }
   
   useEffect(() => {
-    fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Catalogo', import.meta.env.VITE_API_KEY)
+    fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Hoja 1', import.meta.env.VITE_API_KEY)
       .then((data) => {
         if (data.values && data.values.length > 0) {
           setCellValue(data.values);
@@ -105,7 +105,7 @@ export default function App() {
   
       <div className="cardsContainer">
 
-        {/* Sorbetes de colores - Alumino anodizado */}
+        {/* Aluminio 1 */}
         {Array.isArray(cellValue) ? 
           (
             <GenericCard 
@@ -114,15 +114,73 @@ export default function App() {
               
               img:["anodizado.png","bombillas.png", "inoxi.png"],
               title: cellValue[9][0],
-              subtitle: cellValue[10][0],
+              subtitle: cellValue[9][0],
               modelo1: cellValue[11][0],
               precio1: cellValue[11][1],
-              modelo2: cellValue[12][0],
-              precio2: cellValue[12][1],
-              modelo3: cellValue[13][0],
-              precio3: cellValue[13][1],
-              customize: cellValue[14][0],
-              customizePrice: cellValue[14][1],
+              // modelo2: cellValue[12][0],
+              // precio2: cellValue[12][1],
+              // modelo3: cellValue[13][0],
+              // precio3: cellValue[13][1],
+              customize: cellValue[12][0],
+              customizePrice: cellValue[12][1],
+              // en comun
+              descuentosSubtitle: cellValue[17][0],
+              descuento1: cellValue[18][0],
+              descuento2: cellValue[19][0],
+              descuento3: cellValue[20][0],
+              descuento4: cellValue[21][0],
+            }}/>
+          )
+        :<LoadingCard/>}
+
+
+
+        {/* Alumino 2 */}
+        {Array.isArray(cellValue) ? 
+          (
+            <GenericCard 
+            ref={aluminioRef}
+            cell={{
+              
+              img:["anodizado.png","bombillas.png", "inoxi.png"],
+              title: cellValue[9][2],
+              subtitle: cellValue[9][2],
+              modelo1: cellValue[11][2],
+              precio1: cellValue[11][3],
+              // modelo2: cellValue[12][0],
+              // precio2: cellValue[12][1],
+              // modelo3: cellValue[13][0],
+              // precio3: cellValue[13][1],
+              customize: cellValue[12][2],
+              customizePrice: cellValue[12][3],
+              // en comun
+              descuentosSubtitle: cellValue[17][0],
+              descuento1: cellValue[18][0],
+              descuento2: cellValue[19][0],
+              descuento3: cellValue[20][0],
+              descuento4: cellValue[21][0],
+            }}/>
+          )
+        :<LoadingCard/>}
+
+        {/* Aluminio 3 */}
+        {Array.isArray(cellValue) ? 
+          (
+            <GenericCard 
+            ref={aluminioRef}
+            cell={{
+              
+              img:["anodizado.png","bombillas.png", "inoxi.png"],
+              title: cellValue[9][4],
+              subtitle: cellValue[9][4],
+              modelo1: cellValue[11][4],
+              precio1: cellValue[11][5],
+              // modelo2: cellValue[12][0],
+              // precio2: cellValue[12][1],
+              // modelo3: cellValue[13][0],
+              // precio3: cellValue[13][1],
+              customize: cellValue[12][4],
+              customizePrice: cellValue[12][5],
               // en comun
               descuentosSubtitle: cellValue[17][0],
               descuento1: cellValue[18][0],
