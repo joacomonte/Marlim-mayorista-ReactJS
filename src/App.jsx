@@ -18,7 +18,6 @@ export default function App() {
   }, [])
 
 
-
   // default value before fetch
   const [cellValue, setCellValue] = useState('Cargando...');
 
@@ -59,9 +58,6 @@ export default function App() {
 
   return (
     <>
-      {/* Marlim */}
-
-
 
       <div className="navBar"> 
         <div className="navBar__tortuLogoContainer"> <img src="/logoTortu.png" onClick={() => window.scrollTo(0, 0)}></img> </div>
@@ -229,7 +225,7 @@ export default function App() {
             cell={{
             img:["bombillas.png"],
             title: cellValue[40][0],
-            // subtitle: cellValue[10][0],
+            subtitle: cellValue[41][0],
             modelo1: cellValue[41][0],
             precio1: cellValue[41][1],
             modelo2: cellValue[42][0],
