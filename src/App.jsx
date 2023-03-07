@@ -203,7 +203,7 @@ export default function App() {
           <GenericCard 
           ref={inoxiRef}
           cell={{
-            img:["acero.jpg"],
+            img:["inox.jpg"],
             title: cellValue[24][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[25][0],
@@ -286,7 +286,7 @@ export default function App() {
           <GenericCard 
             ref={estucheRef}
             cell={{
-            img:["esttuche.jpg", "estuche grabado.jpg"],
+            img:["est.jpg", "est pers.jpg"],
             title: cellValue[40][0],
             subtitle: cellValue[41][0],
             modelo1: cellValue[41][0],
@@ -314,7 +314,7 @@ export default function App() {
           <GenericCard 
             ref={gondolaRef}
             cell={{
-            img:["bombillas.png"],
+            img:["10.jpg"],
             title: cellValue[48][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[49][0],
@@ -342,7 +342,7 @@ export default function App() {
           <GenericCard 
             ref={mostradorRef}
             cell={{
-            img:["bombillas.png"],
+            img:["kit4.jpg"],
             title: cellValue[53][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[54][0],
@@ -370,7 +370,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
-            img:["bombillas.png"],
+            img:["cartu bom.jpg"],
             title: cellValue[58][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[59][0],
@@ -399,7 +399,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
-            img:["bombillas.png"],
+            img:["ex gran.jpg"],
             title: cellValue[63][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[64][0],
@@ -428,7 +428,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
-            img:["bombillas.png"],
+            img:["ex kit.jpg"],
             title: cellValue[68][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[70][0],
@@ -457,7 +457,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
-            img:["bombillas.png"],
+            img:["ex completo.jpg"],
             title: cellValue[73][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[74][0],
@@ -486,7 +486,7 @@ export default function App() {
           <GenericCard 
             // ref={sinref}
             cell={{
-            img:["bombillas.png"],
+            img:["ex prem.jpg"],
             title: cellValue[78][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[79][0],
