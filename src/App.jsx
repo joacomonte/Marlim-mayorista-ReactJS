@@ -117,7 +117,7 @@ export default function App() {
             ref={aluminioRef}
             cell={{
               
-              img:["anodizado.png"],
+              img:["21.jpg"],
               title: cellValue[9][0],
               subtitle: cellValue[9][0],
               modelo1: cellValue[11][0],
@@ -147,7 +147,7 @@ export default function App() {
             ref={aluminioRef}
             cell={{
               
-              img:["anodizado.png","bombillas.png", "inoxi.png"],
+              img:["cor.jpg"],
               title: cellValue[9][2],
               subtitle: cellValue[9][2],
               modelo1: cellValue[11][2],
@@ -175,7 +175,7 @@ export default function App() {
             ref={aluminioRef}
             cell={{
               
-              img:["anodizado.png","bombillas.png", "inoxi.png"],
+              img:["cur.jpg"],
               title: cellValue[9][4],
               subtitle: cellValue[9][4],
               modelo1: cellValue[11][4],
@@ -203,7 +203,7 @@ export default function App() {
           <GenericCard 
           ref={inoxiRef}
           cell={{
-            img:["inoxi.png"],
+            img:["acero.jpg"],
             title: cellValue[24][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[25][0],
@@ -233,7 +233,7 @@ export default function App() {
           <GenericCard 
             ref={bombillasRef}
             cell={{
-            img:["bombillas.png"],
+            img:["bomb.jpg"],
             title: cellValue[32][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[33][0],
@@ -260,7 +260,7 @@ export default function App() {
           <GenericCard 
             ref={limpiadorRef}
             cell={{
-            img:["bombillas.png"],
+            img:["limp.jpg"],
             title: cellValue[36][0],
             // subtitle: cellValue[10][0],
             modelo1: cellValue[37][0],
@@ -286,7 +286,7 @@ export default function App() {
           <GenericCard 
             ref={estucheRef}
             cell={{
-            img:["bombillas.png"],
+            img:["esttuche.jpg", "estuche grabado.jpg"],
             title: cellValue[40][0],
             subtitle: cellValue[41][0],
             modelo1: cellValue[41][0],
