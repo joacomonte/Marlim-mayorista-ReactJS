@@ -309,7 +309,7 @@ export default function App() {
         :<LoadingCard/>}
 
 
-        {/* exhib cartulina 10 sorbetes */}
+        {/* Exhibidor de cartulina 1 */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -337,11 +337,11 @@ export default function App() {
         :<LoadingCard/>}
 
 
-        {/* exhib cartulina 4 sorbetes */}
+        {/* exhib cartulina 2 */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
-            ref={mostradorRef}
+            // ref={mostradorRef}
             cell={{
             img:["kit4.jpg"],
             title: cellValue[53][0],
@@ -365,7 +365,7 @@ export default function App() {
         :<LoadingCard/>}
 
 
-        {/* exhib cartulina 10 bombi */}
+        {/* exhib cartulina 3 */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -398,7 +398,7 @@ export default function App() {
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
-            // ref={sinref}
+            ref={mostradorRef}
             cell={{
             img:["23.jpg"],
             title: cellValue[63][0],
