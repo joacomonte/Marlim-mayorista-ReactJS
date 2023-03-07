@@ -20,8 +20,8 @@
         throw new Error(`Error fetching sheet data: ${response.status} ${response.statusText}`);
       }
       else {
-        const { values } = await response.json();
-        return values;
+        const { data } = await response.json();
+        return data;
       }
     } 
 
