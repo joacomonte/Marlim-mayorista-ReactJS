@@ -11,7 +11,7 @@
 
 
   const fetchSheetData = async (sheetId, range, apiKey) => {
-    console.log("FetchSheetData() has been called")
+
 
     try {
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
@@ -20,7 +20,8 @@
         throw new Error(`Error fetching sheet data: ${response.status} ${response.statusText}`);
       }
       else {
-        const { data } = await response.json();
+        const data = await response.json();
+        console.log("FetchSheetData() has been called")
         return data;
       }
     } 
