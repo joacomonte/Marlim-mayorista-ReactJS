@@ -117,7 +117,7 @@ export default function App() {
             ref={aluminioRef}
             cell={{
               
-              img:["21.jpg"],
+              img:["rec.jpg"],
               title: cellValue[9][0],
               subtitle: cellValue[9][0],
               modelo1: cellValue[11][0],
