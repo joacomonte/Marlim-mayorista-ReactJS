@@ -29,6 +29,7 @@ export default function App() {
   const estucheRef = useRef(); 
   const gondolaRef = useRef(); 
   const mostradorRef = useRef();
+  const personalizadosRef = useRef();
 
 
 
@@ -144,7 +145,7 @@ export default function App() {
         {Array.isArray(cellValue) ? 
           (
             <GenericCard 
-            ref={aluminioRef}
+            // ref={aluminioRef}
             cell={{
               
               img:["cor.jpg"],
@@ -172,7 +173,7 @@ export default function App() {
         {Array.isArray(cellValue) ? 
           (
             <GenericCard 
-            ref={aluminioRef}
+            // ref={aluminioRef}
             cell={{
               
               img:["cur.jpg"],
@@ -513,7 +514,7 @@ export default function App() {
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
-            // ref={sinref}
+            ref={personalizadosRef}
             cell={{
             img:["16.jpg", "20.jpg", "17.jpg", "19.jpg", "18.jpg", "21.jpg", "22.jpg"],
             title: cellValue[82][0],
