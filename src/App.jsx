@@ -37,7 +37,7 @@ export default function App() {
   // scrolls to the ref and then does a top margin correction
   function scrollWithOffset(argRef) {
     argRef.current.scrollIntoView();
-    setTimeout(()=>  {window.scrollBy(0, -100)}, 800)
+    setTimeout(()=>  {window.scrollBy(0, -80)}, 700)
   }
   
   useEffect(() => {
