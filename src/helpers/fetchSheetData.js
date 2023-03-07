@@ -12,6 +12,7 @@
 
   const fetchSheetData = async (sheetId, range, apiKey) => {
 
+    console.log("FetchSheetData() has been called")
 
     try {
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
@@ -21,7 +22,6 @@
       }
       else {
         const data = await response.json();
-        console.log("FetchSheetData() has been called")
         return data;
       }
     } 
