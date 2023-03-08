@@ -19,7 +19,7 @@ export default function App() {
 
 
   // default value before fetch
-  const [cellValue, setCellValue] = useState('Cargando...');
+  const [cellValue, setCellValue] = useState('Loading...');
 
   //useRefs
   const aluminioRef = useRef(); 
