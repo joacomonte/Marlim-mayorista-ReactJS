@@ -409,8 +409,8 @@ export default function App() {
             // precio2: cellValue[42][1],
             // modelo3: cellValue[43][0],
             // precio3: cellValue[43][1],
-            // customize: cellValue[44][0],
-            // customizePrice: cellValue[44][1],
+            customize: cellValue[65][0],
+            customizePrice: cellValue[65][1],
             // // en comun
             // descuentosSubtitle: cellValue[17][0],
             // descuento1: cellValue[18][0],
@@ -423,7 +423,7 @@ export default function App() {
 
 
 
-        {/* Exhibidor fibrofácil kit */}
+        {/* Exhibidor fibrofácil kit 4 x unidad */}
         {Array.isArray(cellValue) ? 
         (
           <GenericCard 
@@ -438,8 +438,8 @@ export default function App() {
             // precio2: cellValue[42][1],
             // modelo3: cellValue[43][0],
             // precio3: cellValue[43][1],
-            // customize: cellValue[44][0],
-            // customizePrice: cellValue[44][1],
+            customize: cellValue[71][0],
+            customizePrice: cellValue[71][1],
             // // en comun
             // descuentosSubtitle: cellValue[17][0],
             // descuento1: cellValue[18][0],
@@ -467,8 +467,8 @@ export default function App() {
             // precio2: cellValue[42][1],
             // modelo3: cellValue[43][0],
             // precio3: cellValue[43][1],
-            // customize: cellValue[44][0],
-            // customizePrice: cellValue[44][1],
+            customize: cellValue[75][0],
+            customizePrice: cellValue[75][1],
             // // en comun
             // descuentosSubtitle: cellValue[17][0],
             // descuento1: cellValue[18][0],
@@ -496,8 +496,8 @@ export default function App() {
             // precio2: cellValue[42][1],
             // modelo3: cellValue[43][0],
             // precio3: cellValue[43][1],
-            // customize: cellValue[44][0],
-            // customizePrice: cellValue[44][1],
+            customize: cellValue[80][0],
+            customizePrice: cellValue[80][1],
             // // en comun
             // descuentosSubtitle: cellValue[17][0],
             // descuento1: cellValue[18][0],
