@@ -1,14 +1,3 @@
-// const fetchSheetData = async (sheetID, range, apiKey) => {
-//     const response = await fetch(
-//       `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`
-//     );
-//     const data = await response.json();
-//     console.log("FetchSheetData() has been called")
-//     return data;
-//   };
-  
-//   export default fetchSheetData;
-
 
   const fetchSheetData = async (sheetId, range, apiKey) => {
 
@@ -16,8 +5,7 @@
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
       const response = await fetch(url);
       if (!response.ok) {
-        console.log("res null?",response)
-        throw new Error(`Error fetching sheet data: ${response.status} ${response.statusText}`);
+        console.log("res null?",response);
       }
       else {
         console.log("res no null?",response)
@@ -27,8 +15,7 @@
     } 
 
     catch (error) {
-      console.log("fetch error", error.message)
-      // throw new Error(`Error fetching sheet data: ${error.message}`);
+      console.log("catch error: ", error)
     }
   };
   
