@@ -6,7 +6,6 @@
       const response = await fetch(url);
       if (!response.ok) {
         console.log("res not ok: ",response);
-        console.log("res ok",response.error.messege)
       }
       else {
         console.log("res ok",response)
@@ -17,7 +16,7 @@
     } 
 
     catch (error) {
-      console.log("catch error: ", error)
+      console.log("catch error: ", error.messege)
     }
   };
   
