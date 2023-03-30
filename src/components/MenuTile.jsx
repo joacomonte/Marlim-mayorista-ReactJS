@@ -1,12 +1,9 @@
-import React from "react";
-
+import React from 'react';
 
 export default function MenuTile(props) {
-
-    return (
-      <button className="menuTile" style={{ backgroundColor: props.bgcolor }}>
-        {props.cell}
-      </button>
-    );
-  }
-  
+  return (
+    <button className='menuTile' style={{ backgroundColor: props.bgcolor }}>
+      {props.cell}
+    </button>
+  );
+}
