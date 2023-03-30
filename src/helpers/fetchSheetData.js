@@ -27,8 +27,8 @@
     } 
 
     catch (error) {
-      console.log("fetch error", error)
-      throw new Error(`Error fetching sheet data: ${error.message}`);
+      console.log("fetch error", error.message)
+      // throw new Error(`Error fetching sheet data: ${error.message}`);
     }
   };
   
