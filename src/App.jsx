@@ -10,7 +10,6 @@ import LoadingCard from "./components/LoadingCard";
 import GenericCard from "./components/GenericCard";
 
 
-
 export default function App() {
 
   useEffect(() => {
@@ -32,8 +31,6 @@ export default function App() {
   const personalizadosRef = useRef();
 
 
-
-
   // scrolls to the ref and then does a top margin correction
   function scrollWithOffset(argRef) {
     argRef.current.scrollIntoView();
@@ -43,6 +40,7 @@ export default function App() {
   useEffect(() => {
     fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Hoja 1', import.meta.env.VITE_API_KEY)
       .then((data) => {
+        console.log(data);
         if (data.values && data.values.length > 0) {
           setCellValue(data.values);
         } else {
