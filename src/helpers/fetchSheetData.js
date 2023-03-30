@@ -6,9 +6,11 @@
       const response = await fetch(url);
       if (!response.ok) {
         console.log("res not ok: ",response);
+        console.log("res ok",response.error.messege)
       }
       else {
         console.log("res ok",response)
+
         const data = await response.json();
         return data;
       }
