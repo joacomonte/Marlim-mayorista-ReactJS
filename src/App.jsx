@@ -442,7 +442,7 @@ export default function App() {
           <GenericCard
             // ref={sinref}
             cell={{
-              img: ['ex completo.jpg'],
+              img: ['IMG_9520.jpg', 'ex completo.jpg'],
               title: cellValue[73][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[74][0],
@@ -470,7 +470,7 @@ export default function App() {
           <GenericCard
             // ref={sinref}
             cell={{
-              img: ['ex prem.jpg'],
+              img: ['343813454_191905643672724_808407925404404510_n.jpg'],
               title: cellValue[78][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[79][0],
