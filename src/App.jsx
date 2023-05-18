@@ -498,7 +498,7 @@ export default function App() {
           <GenericCard
             ref={personalizadosRef}
             cell={{
-              img: ['IMG_6824.jpg', '16.jpg', '20.jpg', 'IMG_8361.jpg', '17.jpg', 'photo_5019408428229044973_y - copia.jpg', 'photo_5125246064604064711_y (1).jpg' '18.jpg', '21.jpg', 'photo_5060089563887807302_y.jpg'],
+              img: ['IMG_6824.jpg', '16.jpg', '20.jpg', 'IMG_8361.jpg', '17.jpg', 'photo_5019408428229044973_y - copia.jpg', 'photo_5125246064604064711_y (1).jpg', '18.jpg', '21.jpg', 'photo_5060089563887807302_y.jpg'],
               title: cellValue[82][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[83][0],
