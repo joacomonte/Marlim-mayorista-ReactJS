@@ -11,17 +11,17 @@ import GenericCard from './components/GenericCard';
 
 export default function App() {
   const imageNames = [
-    'bosques.png',
+    'merle.png',
+    'ferchetto.png',
+    'pedidos_ya.png',
     'coffee_store.png',
+    'me_ext.png',
+    'bosques.png',
     'dd2.png',
     'emme.png',
-    'ferchetto.png',
     'borja.png',
     'garcia.png',
-    'me_ext.png',
-    'merle.png',
     'mies.png',
-    'pedidos_ya.png',
     'templeton.png',
     'tiendas_green.png',
     'wedrink.png',
