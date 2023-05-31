@@ -13,18 +13,18 @@ export default function App() {
   const imageNames = [
     'merle.png',
     'ferchetto.png',
-    'pedidos_ya.png',
     'coffee_store.png',
+    'pedidos_ya.png',
     'me_ext.png',
     'bosques.png',
     'dd2.png',
-    'emme.png',
+    'wedrink.png',
     'borja.png',
     'garcia.png',
     'mies.png',
     'templeton.png',
     'tiendas_green.png',
-    'wedrink.png',
+    'emme.png',
   ];
 
   useEffect(() => {
