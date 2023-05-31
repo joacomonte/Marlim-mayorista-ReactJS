@@ -10,6 +10,23 @@ import LoadingCard from './components/LoadingCard';
 import GenericCard from './components/GenericCard';
 
 export default function App() {
+  const imageNames = [
+    'bosques.png',
+    'coffee_store.png',
+    'dd2.png',
+    'emme.png',
+    'ferchetto.png',
+    'borja.png',
+    'garcia.png',
+    'me_ext.png',
+    'merle.png',
+    'mies.png',
+    'pedidos_ya.png',
+    'templeton.png',
+    'tiendas_green.png',
+    'wedrink.png',
+  ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -51,7 +68,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <main>
       <div className='navBar'>
         <div className='navBar__tortuLogoContainer'>
           {' '}
@@ -498,7 +515,18 @@ export default function App() {
           <GenericCard
             ref={personalizadosRef}
             cell={{
-              img: ['IMG_6824.jpg', '16.jpg', '20.jpg', 'IMG_8361.jpg', '17.jpg', 'photo_5019408428229044973_y - copia.jpg', 'photo_5125246064604064711_y (1).jpg', '18.jpg', '21.jpg', 'photo_5060089563887807302_y.jpg'],
+              img: [
+                'IMG_6824.jpg',
+                '16.jpg',
+                '20.jpg',
+                'IMG_8361.jpg',
+                '17.jpg',
+                'photo_5019408428229044973_y - copia.jpg',
+                'photo_5125246064604064711_y (1).jpg',
+                '18.jpg',
+                '21.jpg',
+                'photo_5060089563887807302_y.jpg',
+              ],
               title: cellValue[82][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[83][0],
@@ -522,7 +550,31 @@ export default function App() {
         )}
       </div>
 
-      <div style={{ textAlign: 'center', marginBottom: '10px', color: 'grey' }}>
+      <div className='fundacionContainer'>
+        <p className='fundacionText'>
+          {' '}
+          El 1% de todas nuestras ventas lo donamos al programa de Residencias Universitarias de Fundacion Sí
+        </p>
+        <br></br>
+
+        <div className='logo_si_container'>
+          <img className='bannerLogoImg' src={`/logos/si.png`} alt='fundacion si' />
+        </div>
+      </div>
+
+      <section className='bannerLogosSection'>
+        <h1 style={{fontSize:'20px'}}>Nos eligen</h1>
+        <div className='bannerLogoSectionContainer'>
+          {imageNames.map((imageName, index) => (
+            <div className='logoMarcasContainer'>
+              <img className='bannerLogoImg' src={`/logos/${imageName}`} alt={`Gallery ${index}`} key={index} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* logo montech */}
+      <footer style={{ textAlign: 'center', marginBottom: '10px', color: 'grey' }}>
         <a href='https://github.com/joacomonte'>
           <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='40' height='40' viewBox='0 0 64 64'>
             <linearGradient
@@ -560,7 +612,7 @@ export default function App() {
           </svg>
           <p>Made by Montech</p>
         </a>
-      </div>
-    </>
+      </footer>
+    </main>
   );
 }

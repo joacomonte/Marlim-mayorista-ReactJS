@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /*
 
   Con este reset vamos a resolver:
@@ -13,10 +14,10 @@
 :root {
   --negro: #393939;
   /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-principal: 'Montserrat', Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana;
-  
 }
+
 
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
@@ -38,6 +39,7 @@
 }
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
+  word-break: keep-all;
   margin: 0;
   padding: 0;
   border: 0;
@@ -244,6 +246,7 @@ body {
   align-items: center;
   text-align: center;
 
+
   padding-bottom: 30px;
   color:black;
   width: 90%;
@@ -257,13 +260,14 @@ body {
 .genericCard h1{
   font-size: 1.5em; 
   font-weight: bold;
-  padding: 1em;
+  padding: 1.5em;
+  line-height: 1.5;
 }
 
 .genericCard h2{
   font-size: 1em; 
   font-weight: bold; 
-  padding-top: 1em ;
+  padding-top: 2em ;
   padding-bottom: 0.5em;
 }
 .genericCard p{
@@ -273,11 +277,13 @@ body {
 .genericCard__imgContainer{
   width: 100%;
   margin-bottom: 30px;
-  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
 }
 .genericCard__imgContainer img{
   object-fit: contain;
   aspect-ratio: 1/1;
+  max-width: 90%;
 }
 
 .genericCard__imgContainer.fullSize {
@@ -312,7 +318,66 @@ body {
   height: 100%;
 }
 
+.fundacionContainer{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
 
+.fundacionContainer p{
+  width: 500px;
+  text-align: center;
+}
+
+.bannerLogosSection{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.bannerLogoSectionContainer{
+  background-color: white;
+  border-radius: 15px;
+  width: 95%;
+  padding: 30px 50px;
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+  max-width: 800px;
+}
+
+.logoMarcasContainer{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 60px;
+}
+
+.logo_si_container{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+
+}
+.bannerLogoImg{
+  width: 100%; /* Make the image fill the width of the parent div */
+  height: auto; /* Automatically adjust the height based on the aspect ratio */
+  display: block; /* Remove any additional spacing */
+  object-fit: contain; 
+}
 
 
 /* .navBar__menuBtn{
