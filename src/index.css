@@ -231,7 +231,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2%;
 }
 
 
@@ -322,14 +321,17 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 30px;
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
 }
 
 .fundacionContainer p{
-  max-width: 500px;
+
   text-align: center;
+  line-height: 1.5;
+  padding: 0 50px;
+
 }
 
 .bannerLogosSection{
@@ -378,52 +380,3 @@ body {
   display: block; /* Remove any additional spacing */
   object-fit: contain; 
 }
-
-
-/* .navBar__menuBtn{
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-} */
-
-/* SIDE MENU */
-
-
-/* .sideMenu {
-  position: fixed;
-  top: 0;
-  left: -600px;
-  width: 80vw;
-  max-width: 600px;
-  height: 100vh;
-  background-color: #1f1f1f;
-  transition: all 0.3s ease-in-out;
-}
-.sideMenu.active {
-  left: 0;
-}
-
-.sideMenu__titles{
-  padding-top: 60px;
-  display: flex;
-  flex-direction: column;
-
-} */
-
-/* .sideMenu__titles__title{
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  background-color: #282828;
-  transition: all 0.1s ease-in-out;
-}
-.sideMenu__titles__title:hover{
-  background-color: #1F1F1F;
-} */
-
-
-/* SIDE MENU */

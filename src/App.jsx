@@ -122,8 +122,9 @@ export default function App() {
       <div className='fundacionContainer'>
         <p className='fundacionText'>
           {' '}
-          El 1% de todas nuestras ventas lo donamos al programa de Residencias Universitarias de Fundacion Sí
-        </p>
+          Con tu compra colaboras con el programa de Residencias Universitarias de Fundación Sí. 
+          <br></br>
+          Porque el verdadero cambio está en la educación y por eso decidimos donarles cada mes el 1% de todas nuestras ventas.        </p>
         <br></br>
 
         <div className='logo_si_container'>
