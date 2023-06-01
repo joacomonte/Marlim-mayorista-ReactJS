@@ -271,7 +271,7 @@ body {
   padding-bottom: 0.5em;
 }
 .genericCard p{
-  margin-left: 0.2em;
+  font-size: clamp(0.7em, 3.3vw, 1em);
 }
 
 .genericCard__imgContainer{
@@ -328,7 +328,7 @@ body {
 }
 
 .fundacionContainer p{
-  width: 500px;
+  max-width: 500px;
   text-align: center;
 }
 
