@@ -119,6 +119,18 @@ export default function App() {
         </div>
       </div>
 
+      <div className='fundacionContainer'>
+        <p className='fundacionText'>
+          {' '}
+          El 1% de todas nuestras ventas lo donamos al programa de Residencias Universitarias de Fundacion Sí
+        </p>
+        <br></br>
+
+        <div className='logo_si_container'>
+          <img className='bannerLogoImg' src={`/logos/si.png`} alt='fundacion si' />
+        </div>
+      </div>
+
       <div className='cardsContainer'>
         {/* Aluminio 1 */}
         {Array.isArray(cellValue) ? (
@@ -549,18 +561,6 @@ export default function App() {
         ) : (
           <LoadingCard />
         )}
-      </div>
-
-      <div className='fundacionContainer'>
-        <p className='fundacionText'>
-          {' '}
-          El 1% de todas nuestras ventas lo donamos al programa de Residencias Universitarias de Fundacion Sí
-        </p>
-        <br></br>
-
-        <div className='logo_si_container'>
-          <img className='bannerLogoImg' src={`/logos/si.png`} alt='fundacion si' />
-        </div>
       </div>
 
       <section className='bannerLogosSection'>
