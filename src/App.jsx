@@ -564,7 +564,7 @@ export default function App() {
       </div>
 
       <section className='bannerLogosSection'>
-        <h1 style={{fontSize:'20px'}}>Nos eligen</h1>
+        <h1 style={{fontSize:'20px'}}>Confían en nosotros</h1>
         <div className='bannerLogoSectionContainer'>
           {imageNames.map((imageName, index) => (
             <div className='logoMarcasContainer'>
