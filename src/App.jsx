@@ -417,7 +417,7 @@ export default function App() {
           <GenericCard
             ref={mostradorRef}
             cell={{
-              img: ['3QWE.png', '1EW.png'],
+              img: ['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'],
               title: cellValue[63][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[64][0],
