@@ -389,7 +389,7 @@ export default function App() {
           <GenericCard
             // ref={sinref}
             cell={{
-              img: ['cartu bom.jpg'],
+              img: ['IMG_85857.png'],
               title: cellValue[58][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[59][0],
