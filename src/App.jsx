@@ -224,7 +224,7 @@ export default function App() {
             cell={{
               img: ['inox.jpg'],
               title: cellValue[24][0],
-              // subtitle: cellValue[10][0],
+              subtitle: cellValue[24][2],
               modelo1: cellValue[25][0],
               precio1: cellValue[25][1],
               modelo2: cellValue[26][0],
