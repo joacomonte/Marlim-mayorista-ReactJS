@@ -140,7 +140,7 @@ export default function App() {
             cell={{
               img: ['rec.jpg'],
               title: cellValue[9][0],
-              subtitle: cellValue[9][0],
+              subtitle: cellValue[10][0],
               modelo1: cellValue[11][0],
               precio1: cellValue[11][1],
               // modelo2: cellValue[12][0],
@@ -168,7 +168,7 @@ export default function App() {
             cell={{
               img: ['cor.jpg'],
               title: cellValue[9][2],
-              subtitle: cellValue[9][2],
+              subtitle: cellValue[10][2],
               modelo1: cellValue[11][2],
               precio1: cellValue[11][3],
               // modelo2: cellValue[12][0],
@@ -196,7 +196,7 @@ export default function App() {
             cell={{
               img: ['cur.jpg'],
               title: cellValue[9][4],
-              subtitle: cellValue[9][4],
+              subtitle: cellValue[10][4],
               modelo1: cellValue[11][4],
               precio1: cellValue[11][5],
               // modelo2: cellValue[12][0],
