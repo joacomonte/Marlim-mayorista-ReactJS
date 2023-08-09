@@ -252,7 +252,7 @@ export default function App() {
             cell={{
               img: ['bomb.jpg'],
               title: cellValue[32][0],
-              // subtitle: cellValue[10][0],
+              subtitle: cellValue[32][2],
               modelo1: cellValue[33][0],
               precio1: cellValue[33][1],
               modelo2: cellValue[34][0],
@@ -280,7 +280,7 @@ export default function App() {
             cell={{
               img: ['limp.jpg'],
               title: cellValue[36][0],
-              // subtitle: cellValue[10][0],
+              subtitle: cellValue[36][2],
               modelo1: cellValue[37][0],
               precio1: cellValue[37][1],
               // modelo2: cellValue[12][0],
