@@ -178,6 +178,16 @@ body {
   z-index: 2;
 }
 
+.navBar__Button {
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 30px; /* Change this value to position the div on the left side */
+  transform: translateY(-50%);
+  font-size: 14px;
+}
 
 .navBar__tortuLogoContainer{
   margin-top: -10px;

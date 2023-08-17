@@ -54,26 +54,10 @@ const GenericCard = ({ cell }, ref) => {
 
       <div className='genericCard__description'>
         {subtitle && <h2>{subtitle}</h2>}
-        {modelo1 && precio1 && (
-          <p>
-            {modelo1}: {precio1}
-          </p>
-        )}
-        {modelo2 && precio2 && (
-          <p>
-            {modelo2}: {precio2}
-          </p>
-        )}
-        {modelo3 && precio3 && (
-          <p>
-            {modelo3}: {precio3}
-          </p>
-        )}
-        {customize && customizePrice && (
-          <p>
-            {customize} {customizePrice}
-          </p>
-        )}
+        {modelo1 && precio1 && (<p>{modelo1}: {precio1}</p>)}
+        {modelo2 && precio2 && (<p>{modelo2}: {precio2}</p>)}
+        {modelo3 && precio3 && (<p>{modelo3}: {precio3}</p>)}
+        {customize && customizePrice && (<p>{customize} {customizePrice}</p>)}
         {descuentosSubtitle && <h2>{descuentosSubtitle}</h2>}
         {descuento1 && <p>{descuento1}</p>}
         {descuento2 && <p>{descuento2}</p>}
