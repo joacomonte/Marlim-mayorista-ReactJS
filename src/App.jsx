@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 import Home from './pages/Home';
-import Contact from './Pages/Contact';
+import Contact from './pages/Contact';
 
 function App() {
   return (
