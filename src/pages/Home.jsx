@@ -47,12 +47,8 @@ export default function Home() {
   const personalizadosRef = useRef();
 
   // scrolls to the ref and then does a top margin correction
-  function scrollWithOffset(argRef) {
-    argRef.current.scrollIntoView();
-    setTimeout(() => {
-      window.scrollBy(0, -80);
-    }, 700);
-  }
+  const scrollToRef = (ref) => ref.current.scrollIntoView();
+
 
   useEffect(() => {
     fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Hoja 1', import.meta.env.VITE_API_KEY)
@@ -86,42 +82,42 @@ export default function Home() {
 
       <div className='menuTilesContainer'>
         {/* Sorbetes de colores - Alumino anodizado */}
-        <div onClick={() => scrollWithOffset(aluminioRef)}>
+        <div onClick={() => scrollToRef(aluminioRef)}>
           <MenuTile bgcolor='#F2C819' cell={Array.isArray(cellValue) ? cellValue[0][0] : cellValue} />
         </div>
 
         {/* Sorbetes de acero inoxidable */}
-        <div onClick={() => scrollWithOffset(inoxiRef)}>
+        <div onClick={() => scrollToRef(inoxiRef)}>
           <MenuTile bgcolor='#FF8734' cell={Array.isArray(cellValue) ? cellValue[1][0] : cellValue} />
         </div>
 
         {/* Bombillas para mate */}
-        <div onClick={() => scrollWithOffset(bombillasRef)}>
+        <div onClick={() => scrollToRef(bombillasRef)}>
           <MenuTile bgcolor='#E74741' cell={Array.isArray(cellValue) ? cellValue[2][0] : cellValue} />
         </div>
 
         {/* Limpiador de cerda */}
-        <div onClick={() => scrollWithOffset(limpiadorRef)}>
+        <div onClick={() => scrollToRef(limpiadorRef)}>
           <MenuTile bgcolor='#FF8AC5' cell={Array.isArray(cellValue) ? cellValue[3][0] : cellValue} />
         </div>
 
         {/* Estuche de viaje */}
-        <div onClick={() => scrollWithOffset(estucheRef)}>
+        <div onClick={() => scrollToRef(estucheRef)}>
           <MenuTile bgcolor='#ED12ED' cell={Array.isArray(cellValue) ? cellValue[4][0] : cellValue} />
         </div>
 
         {/* Exhibidores para góndola */}
-        <div onClick={() => scrollWithOffset(gondolaRef)}>
+        <div onClick={() => scrollToRef(gondolaRef)}>
           <MenuTile bgcolor='#1A4BB2' cell={Array.isArray(cellValue) ? cellValue[5][0] : cellValue} />
         </div>
 
         {/* Exhibidores para mostrador */}
-        <div onClick={() => scrollWithOffset(mostradorRef)}>
+        <div onClick={() => scrollToRef(mostradorRef)}>
           <MenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellValue) ? cellValue[6][0] : cellValue} />
         </div>
 
         {/* Personalizaciones */}
-        <div onClick={() => scrollWithOffset(personalizadosRef)}>
+        <div onClick={() => scrollToRef(personalizadosRef)}>
           <MenuTile bgcolor='#85BD6B' cell={Array.isArray(cellValue) ? cellValue[7][0] : cellValue} />
         </div>
       </div>
