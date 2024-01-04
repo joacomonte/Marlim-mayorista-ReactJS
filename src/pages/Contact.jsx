@@ -48,7 +48,7 @@ const Contact = () => {
           <label style={{ marginRight: '8px', cursor: 'pointer' }}>WhatsApp</label>
           </a>
 
-          <a href='https://www.instagram.com/marlimsorbetes/' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+          <a href='https://www.tiktok.com/@marlimsorbetes' target='_blank' rel='noopener noreferrer' style={linkStyle}>
           <FaTiktok className='socialIcon' style={{ ...iconStyle, cursor: 'pointer' }} />
           <label style={{ marginRight: '8px', cursor: 'pointer' }}>TikTok</label>
           </a>
