@@ -32,8 +32,8 @@ const Contact = () => {
         <Link to='/' className='navBar__Button'>
           Volver
         </Link>
-      </div
-
+      </div>
+      
       <div style={{ paddingTop: '100px', display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems:'center', gap:'30px'}}>
 
           <h1 style={{fontSize:'40px', paddingBottom: '40px'}}>Contacto</h1>
