@@ -32,8 +32,8 @@ const Contact = () => {
         <Link to='/' className='navBar__Button'>
           Volver
         </Link>
-      </div>
-      
+      </div
+
       <div style={{ paddingTop: '100px', display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems:'center', gap:'30px'}}>
 
           <h1 style={{fontSize:'40px', paddingBottom: '40px'}}>Contacto</h1>
@@ -43,7 +43,7 @@ const Contact = () => {
           <label style={{ marginRight: '8px', cursor: 'pointer' }}>Instagram</label>
           </a>
 
-          <a href='https://api.whatsapp.com/send?phone=541123937202' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+          <a href='https://api.whatsapp.com/send?phone=5473663259' target='_blank' rel='noopener noreferrer' style={linkStyle}>
           <FaWhatsapp className='socialIcon' style={{ ...iconStyle, cursor: 'pointer' }} />
           <label style={{ marginRight: '8px', cursor: 'pointer' }}>WhatsApp</label>
           </a>
