@@ -535,9 +535,9 @@ export default function Home() {
               img: [
                 'IMG_6824.jpg',
                 '1234567.jpg',
-                'IMG_8361.jpg',
-                '123456.jpg',
                 '123.jpg',
+                '123456.jpg',
+                'IMG_8361.jpg',
                 '12345.jpg',
                 '0123456.jpg',
                 '01234.jpg',
