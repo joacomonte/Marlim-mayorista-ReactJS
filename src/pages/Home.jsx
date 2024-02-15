@@ -476,7 +476,7 @@ export default function Home() {
           <GenericCard
             // ref={sinref}
             cell={{
-              img: ['IMG_9520.jpg', 'ex completo.jpg'],
+              img: ['IMG_9520.jpg'],
               title: cellValue[73][0],
               // subtitle: cellValue[10][0],
               modelo1: cellValue[74][0],
