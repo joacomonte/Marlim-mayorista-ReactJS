@@ -534,15 +534,14 @@ export default function Home() {
             cell={{
               img: [
                 'IMG_6824.jpg',
-                '1234567.heic',
+                '1234567.jpg',
                 'IMG_8361.jpg',
-                '123456.HEIC',
+                '123456.jpg',
                 '123.jpg',
                 '12345.jpg',
                 '0123456.jpg',
                 '01234.jpg',
                 '0123.jpg',
-                'photo_5125246064604064711_y (1).jpg',
                 '18.jpg',
                 '1234.jpg',
                 '012.jpg',
