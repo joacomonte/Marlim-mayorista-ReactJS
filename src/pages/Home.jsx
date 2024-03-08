@@ -46,7 +46,7 @@ export default function Home() {
   const mostradorRef = useRef();
   const personalizadosRef = useRef();
 
-  //this is test
+  //testing rebase
 
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
