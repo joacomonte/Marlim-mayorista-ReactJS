@@ -45,7 +45,7 @@ export default function Home() {
   const gondolaRef = useRef();
   const mostradorRef = useRef();
   const personalizadosRef = useRef();
-  const materRef = useRef();
+  // const materRef = useRef();
 
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
@@ -280,7 +280,7 @@ export default function Home() {
         {/* bombilla para mate */}
         {Array.isArray(cellValue) ? (
           <GenericCard
-            ref={mateRef}
+            ref={bombillasRef}
             cell={{
               img: ['bomb.jpg'],
               title: cellValue[128][4],
