@@ -276,6 +276,34 @@ export default function Home() {
           <LoadingCard />
         )}
 
+        {/* bombilla para mate */}
+        {Array.isArray(cellValue) ? (
+          <GenericCard
+            ref={mateRef}
+            cell={{
+              img: ['bomb.jpg'],
+              title: cellValue[128][4],
+              subtitle: cellValue[129][4],
+              modelo1: cellValue[130][4],
+              precio1: cellValue[33][5],
+              modelo2: cellValue[131][4],
+              precio2: cellValue[34][5],
+              modelo3: cellValue[132][4],
+              // precio3: cellValue[13][5],
+              customize: cellValue[133][4],
+              // customizePrice: cellValue[14][1],
+              // en comun
+              descuentosSubtitle: cellValue[137][4],
+              descuento1: cellValue[138][4],
+              descuento2: cellValue[139][4],
+              descuento3: cellValue[140][4],
+              descuento4: cellValue[141][4],
+            }}
+          />
+        ) : (
+          <LoadingCard />
+        )}
+
         {/* limpiador */}
         {Array.isArray(cellValue) ? (
           <GenericCard
