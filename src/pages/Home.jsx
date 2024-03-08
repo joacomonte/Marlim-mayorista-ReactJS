@@ -45,6 +45,7 @@ export default function Home() {
   const gondolaRef = useRef();
   const mostradorRef = useRef();
   const personalizadosRef = useRef();
+  const materRef = useRef();
 
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
