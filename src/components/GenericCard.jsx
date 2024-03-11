@@ -14,20 +14,20 @@ const GenericCard = ({ cell }, ref) => {
   const {
     img,
     title,
-    subtitle,
+    subtitle1,
     modelo1,
     precio1,
     modelo2,
     precio2,
     modelo3,
     precio3,
-    customize,
-    customizePrice,
-    descuentosSubtitle,
-    descuento1,
-    descuento2,
-    descuento3,
-    descuento4,
+    modelo4,
+    precio4,
+    subtitle2,
+    label1,
+    label2,
+    label3,
+    label4,
   } = cell;
 
   return (
@@ -53,16 +53,32 @@ const GenericCard = ({ cell }, ref) => {
       )}
 
       <div className='genericCard__description'>
-        {subtitle && <h2>{subtitle}</h2>}
-        {modelo1 && precio1 && (<p>{modelo1}: {precio1}</p>)}
-        {modelo2 && precio2 && (<p>{modelo2}: {precio2}</p>)}
-        {modelo3 && precio3 && (<p>{modelo3}: {precio3}</p>)}
-        {customize && customizePrice && (<p>{customize} {customizePrice}</p>)}
-        {descuentosSubtitle && <h2>{descuentosSubtitle}</h2>}
-        {descuento1 && <p>{descuento1}</p>}
-        {descuento2 && <p>{descuento2}</p>}
-        {descuento3 && <p>{descuento3}</p>}
-        {descuento4 && <p>{descuento4}</p>}
+        {subtitle1 && <h2>{subtitle1}</h2>}
+        {modelo1 && precio1 && (
+          <p>
+            {modelo1}: {precio1}
+          </p>
+        )}
+        {modelo2 && precio2 && (
+          <p>
+            {modelo2}: {precio2}
+          </p>
+        )}
+        {modelo3 && precio3 && (
+          <p>
+            {modelo3}: {precio3}
+          </p>
+        )}
+        {modelo4 && precio4 && (
+          <p>
+            {modelo4} {precio4}
+          </p>
+        )}
+        {subtitle2 && <h2>{subtitle2}</h2>}
+        {label1 && <p>{label1}</p>}
+        {label2 && <p>{label2}</p>}
+        {label3 && <p>{label3}</p>}
+        {label4 && <p>{label4}</p>}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 // React Imports
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 //helpers
 import fetchSheetData from '../helpers/fetchSheetData';
 
@@ -8,7 +8,6 @@ import fetchSheetData from '../helpers/fetchSheetData';
 import MenuTile from '../components/MenuTile';
 import LoadingCard from '../components/LoadingCard';
 import GenericCard from '../components/GenericCard';
-
 
 export default function Home() {
   const imageNames = [
@@ -51,11 +50,10 @@ export default function Home() {
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
 
-
   useEffect(() => {
     fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Hoja 1', import.meta.env.VITE_API_KEY)
       .then((data) => {
-        console.log('datos',data);
+        console.log('datos', data);
         if (data?.values && data.values.length > 0) {
           setCellValue(data.values);
         } else {
@@ -70,67 +68,65 @@ export default function Home() {
 
   return (
     <main>
-     <div className='navBar'>
+      <div className='navBar'>
         <div className='navBar__tortuLogoContainer'>
-          <img
-            src='/logoTortu.png'
-            onClick={() => window.scrollTo(0, 0)}
-            alt='Tortu Logo'
-          />
+          <img src='/logoTortu.png' onClick={() => window.scrollTo(0, 0)} alt='Tortu Logo' />
         </div>
         <Link to='/contact' className='navBar__Button'>
           Contacto
         </Link>
-        </div>
+      </div>
 
       <div className='menuTilesContainer'>
         {/* Sorbetes de colores - Alumino anodizado */}
         <div onClick={() => scrollToRef(aluminioRef)}>
-          <MenuTile bgcolor='#F2C819' cell={Array.isArray(cellValue) ? cellValue[0][0] : cellValue} />
+          <MenuTile bgcolor='#F2C819' title={'Sorbetes de colores - Alumino anodizado'} />
         </div>
 
         {/* Sorbetes de acero inoxidable */}
         <div onClick={() => scrollToRef(inoxiRef)}>
-          <MenuTile bgcolor='#FF8734' cell={Array.isArray(cellValue) ? cellValue[1][0] : cellValue} />
+          <MenuTile bgcolor='#FF8734' title={'Sorbetes de acero inoxidable'} />
         </div>
 
         {/* Bombillas para mate */}
         <div onClick={() => scrollToRef(bombillasRef)}>
-          <MenuTile bgcolor='#E74741' cell={Array.isArray(cellValue) ? cellValue[2][0] : cellValue} />
+          <MenuTile bgcolor='#E74741' title={'Bombillas para mate'} />
         </div>
 
         {/* Limpiador de cerda */}
         <div onClick={() => scrollToRef(limpiadorRef)}>
-          <MenuTile bgcolor='#FF8AC5' cell={Array.isArray(cellValue) ? cellValue[3][0] : cellValue} />
+          <MenuTile bgcolor='#FF8AC5' title={'Limpiador de cerda'} />
         </div>
 
         {/* Estuche de viaje */}
         <div onClick={() => scrollToRef(estucheRef)}>
-          <MenuTile bgcolor='#ED12ED' cell={Array.isArray(cellValue) ? cellValue[4][0] : cellValue} />
+          <MenuTile bgcolor='#ED12ED' title={'Estuche de viaje'} />
         </div>
 
         {/* Exhibidores para góndola */}
         <div onClick={() => scrollToRef(gondolaRef)}>
-          <MenuTile bgcolor='#1A4BB2' cell={Array.isArray(cellValue) ? cellValue[5][0] : cellValue} />
+          <MenuTile bgcolor='#1A4BB2' title={'Exhibidores góndola'} />
         </div>
 
         {/* Exhibidores para mostrador */}
         <div onClick={() => scrollToRef(mostradorRef)}>
-          <MenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellValue) ? cellValue[6][0] : cellValue} />
+          <MenuTile bgcolor='#0AB8F8' title={'Exhibidores mostrador'} />
         </div>
 
         {/* Personalizaciones */}
         <div onClick={() => scrollToRef(personalizadosRef)}>
-          <MenuTile bgcolor='#85BD6B' cell={Array.isArray(cellValue) ? cellValue[7][0] : cellValue} />
+          <MenuTile bgcolor='#85BD6B' title={'Personalizados'} />
         </div>
       </div>
 
       <div className='fundacionContainer'>
         <p className='fundacionText'>
           {' '}
-          Con tu compra colaboras con el programa de Residencias Universitarias de Fundación Sí. 
+          Con tu compra colaboras con el programa de Residencias Universitarias de Fundación Sí.
           <br></br>
-          Porque el verdadero cambio está en la educación y por eso decidimos donarles cada mes el 1% de todas nuestras ventas.        </p>
+          Porque el verdadero cambio está en la educación y por eso decidimos donarles cada mes el 1% de todas
+          nuestras ventas.{' '}
+        </p>
         <br></br>
 
         <div className='logo_si_container'>
@@ -145,22 +141,21 @@ export default function Home() {
             ref={aluminioRef}
             cell={{
               img: ['rec.jpg'],
-              title: cellValue[9][0],
-              subtitle: cellValue[10][0],
-              modelo1: cellValue[11][0],
-              precio1: cellValue[11][1],
-              // modelo2: cellValue[12][0],
-              // precio2: cellValue[12][1],
-              // modelo3: cellValue[13][0],
-              // precio3: cellValue[13][1],
-              customize: cellValue[12][0],
-              customizePrice: cellValue[12][1],
-              // en comun
-              descuentosSubtitle: cellValue[17][0],
-              descuento1: cellValue[18][0],
-              descuento2: cellValue[19][0],
-              descuento3: cellValue[20][0],
-              descuento4: cellValue[21][0],
+              title: cellValue[0][0],
+              subtitle1: cellValue[1][0],
+              modelo1: cellValue[2][0],
+              precio1: cellValue[2][1],
+              modelo2: cellValue[3][0],
+              precio2: cellValue[3][1],
+              modelo3: cellValue[4][0],
+              precio3: cellValue[4][1],
+              modelo4: cellValue[5][0],
+              precio4: cellValue[5][1],
+              subtitle2: cellValue[6][0],
+              label1: cellValue[7][0],
+              label2: cellValue[8][0],
+              label3: cellValue[9][0],
+              label4: cellValue[10][0],
             }}
           />
         ) : (
@@ -173,22 +168,21 @@ export default function Home() {
             // ref={aluminioRef}
             cell={{
               img: ['cor.jpg'],
-              title: cellValue[9][2],
-              subtitle: cellValue[10][2],
-              modelo1: cellValue[11][2],
-              precio1: cellValue[11][3],
-              // modelo2: cellValue[12][0],
-              // precio2: cellValue[12][1],
-              // modelo3: cellValue[13][0],
-              // precio3: cellValue[13][1],
-              customize: cellValue[12][2],
-              customizePrice: cellValue[12][3],
-              // en comun
-              descuentosSubtitle: cellValue[17][0],
-              descuento1: cellValue[18][0],
-              descuento2: cellValue[19][0],
-              descuento3: cellValue[20][0],
-              descuento4: cellValue[21][0],
+              title: cellValue[15][0],
+              subtitle1: cellValue[16][0],
+              modelo1: cellValue[17][0],
+              precio1: cellValue[17][1],
+              modelo2: cellValue[18][0],
+              precio2: cellValue[18][1],
+              modelo3: cellValue[19][0],
+              precio3: cellValue[19][1],
+              modelo4: cellValue[20][0],
+              precio4: cellValue[20][1],
+              subtitle2: cellValue[21][0],
+              label1: cellValue[22][0],
+              label2: cellValue[23][0],
+              label3: cellValue[24][0],
+              label4: cellValue[25][0],
             }}
           />
         ) : (
@@ -201,22 +195,21 @@ export default function Home() {
             // ref={aluminioRef}
             cell={{
               img: ['cur.jpg'],
-              title: cellValue[9][4],
-              subtitle: cellValue[10][4],
-              modelo1: cellValue[11][4],
-              precio1: cellValue[11][5],
-              // modelo2: cellValue[12][0],
-              // precio2: cellValue[12][1],
-              // modelo3: cellValue[13][0],
-              // precio3: cellValue[13][1],
-              customize: cellValue[12][4],
-              customizePrice: cellValue[12][5],
-              // en comun
-              descuentosSubtitle: cellValue[17][0],
-              descuento1: cellValue[18][0],
-              descuento2: cellValue[19][0],
-              descuento3: cellValue[20][0],
-              descuento4: cellValue[21][0],
+              title: cellValue[30][0],
+              subtitle1: cellValue[31][0],
+              modelo1: cellValue[32][0],
+              precio1: cellValue[32][1],
+              modelo2: cellValue[33][0],
+              precio2: cellValue[33][1],
+              modelo3: cellValue[34][0],
+              precio3: cellValue[34][1],
+              modelo4: cellValue[35][0],
+              precio4: cellValue[35][1],
+              subtitle2: cellValue[36][0],
+              label1: cellValue[37][0],
+              label2: cellValue[38][0],
+              label3: cellValue[39][0],
+              label4: cellValue[40][0],
             }}
           />
         ) : (
@@ -229,22 +222,21 @@ export default function Home() {
             ref={inoxiRef}
             cell={{
               img: ['inox.jpg'],
-              title: cellValue[24][0],
-              subtitle: cellValue[24][2],
-              modelo1: cellValue[25][0],
-              precio1: cellValue[25][1],
-              modelo2: cellValue[26][0],
-              precio2: cellValue[26][1],
-              modelo3: cellValue[27][0],
-              precio3: cellValue[27][1],
-              customize: cellValue[28][0],
-              customizePrice: cellValue[28][1],
-              // en comun
-              descuentosSubtitle: cellValue[17][0],
-              descuento1: cellValue[18][0],
-              descuento2: cellValue[19][0],
-              descuento3: cellValue[20][0],
-              descuento4: cellValue[21][0],
+              title: cellValue[45][0],
+              subtitle1: cellValue[46][0],
+              modelo1: cellValue[47][0],
+              precio1: cellValue[47][1],
+              modelo2: cellValue[48][0],
+              precio2: cellValue[48][1],
+              modelo3: cellValue[49][0],
+              precio3: cellValue[49][1],
+              modelo4: cellValue[50][0],
+              precio4: cellValue[50][1],
+              subtitle2: cellValue[51][0],
+              label1: cellValue[52][0],
+              label2: cellValue[53][0],
+              label3: cellValue[54][0],
+              label4: cellValue[55][0],
             }}
           />
         ) : (
@@ -257,22 +249,21 @@ export default function Home() {
             ref={bombillasRef}
             cell={{
               img: ['bomb.jpg'],
-              title: cellValue[32][0],
-              subtitle: cellValue[32][2],
-              modelo1: cellValue[33][0],
-              precio1: cellValue[33][1],
-              modelo2: cellValue[34][0],
-              precio2: cellValue[34][1],
-              // modelo3: cellValue[13][0],
-              // precio3: cellValue[13][1],
-              // customize: cellValue[14][0],
-              // customizePrice: cellValue[14][1],
-              // en comun
-              descuentosSubtitle: cellValue[17][0],
-              descuento1: cellValue[18][0],
-              descuento2: cellValue[19][0],
-              descuento3: cellValue[20][0],
-              descuento4: cellValue[21][0],
+              title: cellValue[60][0],
+              subtitle1: cellValue[61][0],
+              modelo1: cellValue[62][0],
+              precio1: cellValue[62][1],
+              modelo2: cellValue[63][0],
+              precio2: cellValue[63][1],
+              modelo3: cellValue[64][0],
+              precio3: cellValue[64][1],
+              modelo4: cellValue[65][0],
+              precio4: cellValue[65][1],
+              subtitle2: cellValue[66][0],
+              label1: cellValue[67][0],
+              label2: cellValue[68][0],
+              label3: cellValue[69][0],
+              label4: cellValue[70][0],
             }}
           />
         ) : (
@@ -285,21 +276,21 @@ export default function Home() {
             ref={limpiadorRef}
             cell={{
               img: ['limp.jpg'],
-              title: cellValue[36][0],
-              subtitle: cellValue[36][2],
-              modelo1: cellValue[37][0],
-              precio1: cellValue[37][1],
-              // modelo2: cellValue[12][0],
-              // precio2: cellValue[12][1],
-              // modelo3: cellValue[13][0],
-              // precio3: cellValue[13][1],
-              // customize: cellValue[14][0],
-              // customizePrice: cellValue[14][1],
-              descuentosSubtitle: cellValue[17][0],
-              descuento1: cellValue[18][0],
-              descuento2: cellValue[19][0],
-              descuento3: cellValue[20][0],
-              descuento4: cellValue[21][0],
+              title: cellValue[75][0],
+              subtitle1: cellValue[76][0],
+              modelo1: cellValue[77][0],
+              precio1: cellValue[77][1],
+              modelo2: cellValue[78][0],
+              precio2: cellValue[78][1],
+              modelo3: cellValue[79][0],
+              precio3: cellValue[79][1],
+              modelo4: cellValue[80][0],
+              precio4: cellValue[80][1],
+              subtitle2: cellValue[81][0],
+              label1: cellValue[82][0],
+              label2: cellValue[83][0],
+              label3: cellValue[84][0],
+              label4: cellValue[85][0],
             }}
           />
         ) : (
@@ -312,22 +303,21 @@ export default function Home() {
             ref={estucheRef}
             cell={{
               img: ['est.jpg', 'est pers.jpg'],
-              title: cellValue[40][0],
-              subtitle: cellValue[41][0],
-              modelo1: cellValue[41][0],
-              precio1: cellValue[41][1],
-              modelo2: cellValue[42][0],
-              precio2: cellValue[42][1],
-              modelo3: cellValue[43][0],
-              precio3: cellValue[43][1],
-              customize: cellValue[44][0],
-              customizePrice: cellValue[44][1],
-              // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[90][0],
+              subtitle1: cellValue[91][0],
+              modelo1: cellValue[92][0],
+              precio1: cellValue[92][1],
+              modelo2: cellValue[93][0],
+              precio2: cellValue[93][1],
+              modelo3: cellValue[94][0],
+              precio3: cellValue[94][1],
+              modelo4: cellValue[95][0],
+              precio4: cellValue[95][1],
+              subtitle2: cellValue[96][0],
+              label1: cellValue[97][0],
+              label2: cellValue[98][0],
+              label3: cellValue[99][0],
+              label4: cellValue[100][0],
             }}
           />
         ) : (
@@ -340,22 +330,21 @@ export default function Home() {
             ref={gondolaRef}
             cell={{
               img: ['10.jpg'],
-              title: cellValue[48][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[49][0],
-              precio1: cellValue[49][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              // customize: cellValue[44][0],
-              // customizePrice: cellValue[44][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[105][0],
+              subtitle1: cellValue[106][0],
+              modelo1: cellValue[107][0],
+              precio1: cellValue[107][1],
+              modelo2: cellValue[108][0],
+              precio2: cellValue[108][1],
+              modelo3: cellValue[109][0],
+              precio3: cellValue[109][1],
+              modelo4: cellValue[110][0],
+              precio4: cellValue[110][1],
+              subtitle2: cellValue[111][0],
+              label1: cellValue[112][0],
+              label2: cellValue[113][0],
+              label3: cellValue[114][0],
+              label4: cellValue[115][0],
             }}
           />
         ) : (
@@ -368,22 +357,21 @@ export default function Home() {
             // ref={mostradorRef}
             cell={{
               img: ['kit4.jpg'],
-              title: cellValue[53][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[54][0],
-              precio1: cellValue[54][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              // customize: cellValue[44][0],
-              // customizePrice: cellValue[44][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[120][0],
+              subtitle1: cellValue[121][0],
+              modelo1: cellValue[122][0],
+              precio1: cellValue[122][1],
+              modelo2: cellValue[123][0],
+              precio2: cellValue[123][1],
+              modelo3: cellValue[124][0],
+              precio3: cellValue[124][1],
+              modelo4: cellValue[125][0],
+              precio4: cellValue[125][1],
+              subtitle2: cellValue[126][0],
+              label1: cellValue[127][0],
+              label2: cellValue[128][0],
+              label3: cellValue[129][0],
+              label4: cellValue[130][0],
             }}
           />
         ) : (
@@ -396,22 +384,21 @@ export default function Home() {
             // ref={sinref}
             cell={{
               img: ['IMG_85857.png'],
-              title: cellValue[58][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[59][0],
-              precio1: cellValue[59][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              // customize: cellValue[44][0],
-              // customizePrice: cellValue[44][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[135][0],
+              subtitle1: cellValue[136][0],
+              modelo1: cellValue[137][0],
+              precio1: cellValue[137][1],
+              modelo2: cellValue[138][0],
+              precio2: cellValue[138][1],
+              modelo3: cellValue[139][0],
+              precio3: cellValue[139][1],
+              modelo4: cellValue[140][0],
+              precio4: cellValue[140][1],
+              subtitle2: cellValue[141][0],
+              label1: cellValue[142][0],
+              label2: cellValue[143][0],
+              label3: cellValue[144][0],
+              label4: cellValue[145][0],
             }}
           />
         ) : (
@@ -424,22 +411,21 @@ export default function Home() {
             ref={mostradorRef}
             cell={{
               img: ['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'],
-              title: cellValue[63][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[64][0],
-              precio1: cellValue[64][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              customize: cellValue[65][0],
-              customizePrice: cellValue[65][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[150][0],
+              subtitle1: cellValue[151][0],
+              modelo1: cellValue[152][0],
+              precio1: cellValue[152][1],
+              modelo2: cellValue[153][0],
+              precio2: cellValue[153][1],
+              modelo3: cellValue[154][0],
+              precio3: cellValue[154][1],
+              modelo4: cellValue[155][0],
+              precio4: cellValue[155][1],
+              subtitle2: cellValue[156][0],
+              label1: cellValue[157][0],
+              label2: cellValue[158][0],
+              label3: cellValue[159][0],
+              label4: cellValue[160][0],
             }}
           />
         ) : (
@@ -452,22 +438,21 @@ export default function Home() {
             // ref={sinref}
             cell={{
               img: ['ex kit.jpg'],
-              title: cellValue[68][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[69][0],
-              precio1: cellValue[69][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              customize: cellValue[70][0],
-              customizePrice: cellValue[70][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[165][0],
+              subtitle1: cellValue[166][0],
+              modelo1: cellValue[167][0],
+              precio1: cellValue[167][1],
+              modelo2: cellValue[168][0],
+              precio2: cellValue[168][1],
+              modelo3: cellValue[169][0],
+              precio3: cellValue[169][1],
+              modelo4: cellValue[170][0],
+              precio4: cellValue[170][1],
+              subtitle2: cellValue[171][0],
+              label1: cellValue[172][0],
+              label2: cellValue[173][0],
+              label3: cellValue[174][0],
+              label4: cellValue[175][0],
             }}
           />
         ) : (
@@ -480,22 +465,21 @@ export default function Home() {
             // ref={sinref}
             cell={{
               img: ['IMG_9520.jpg'],
-              title: cellValue[73][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[74][0],
-              precio1: cellValue[74][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              customize: cellValue[75][0],
-              customizePrice: cellValue[75][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[180][0],
+              subtitle1: cellValue[181][0],
+              modelo1: cellValue[182][0],
+              precio1: cellValue[182][1],
+              modelo2: cellValue[183][0],
+              precio2: cellValue[183][1],
+              modelo3: cellValue[184][0],
+              precio3: cellValue[184][1],
+              modelo4: cellValue[185][0],
+              precio4: cellValue[185][1],
+              subtitle2: cellValue[186][0],
+              label1: cellValue[187][0],
+              label2: cellValue[188][0],
+              label3: cellValue[189][0],
+              label4: cellValue[190][0],
             }}
           />
         ) : (
@@ -508,22 +492,47 @@ export default function Home() {
             // ref={sinref}
             cell={{
               img: ['343813454_191905643672724_808407925404404510_n.jpg'],
-              title: cellValue[78][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[79][0],
-              precio1: cellValue[79][1],
-              // modelo2: cellValue[42][0],
-              // precio2: cellValue[42][1],
-              // modelo3: cellValue[43][0],
-              // precio3: cellValue[43][1],
-              customize: cellValue[80][0],
-              customizePrice: cellValue[80][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[195][0],
+              subtitle1: cellValue[196][0],
+              modelo1: cellValue[197][0],
+              precio1: cellValue[197][1],
+              modelo2: cellValue[198][0],
+              precio2: cellValue[198][1],
+              modelo3: cellValue[199][0],
+              precio3: cellValue[199][1],
+              modelo4: cellValue[200][0],
+              precio4: cellValue[200][1],
+              subtitle2: cellValue[201][0],
+              label1: cellValue[202][0],
+              label2: cellValue[203][0],
+              label3: cellValue[204][0],
+              label4: cellValue[205][0],
+            }}
+          />
+        ) : (
+          <LoadingCard />
+        )}
+
+        {Array.isArray(cellValue) ? (
+          <GenericCard
+            // ref={sinref}
+            cell={{
+              img: ['343813454_191905643672724_808407925404404510_n.jpg'],
+              title: cellValue[210][0],
+              subtitle1: cellValue[211][0],
+              modelo1: cellValue[212][0],
+              precio1: cellValue[212][1],
+              modelo2: cellValue[213][0],
+              precio2: cellValue[213][1],
+              modelo3: cellValue[214][0],
+              precio3: cellValue[214][1],
+              modelo4: cellValue[215][0],
+              precio4: cellValue[215][1],
+              subtitle2: cellValue[216][0],
+              label1: cellValue[217][0],
+              label2: cellValue[218][0],
+              label3: cellValue[219][0],
+              label4: cellValue[220][0],
             }}
           />
         ) : (
@@ -551,22 +560,21 @@ export default function Home() {
                 '12345678.jpg',
                 '01.jpg',
               ],
-              title: cellValue[82][0],
-              // subtitle: cellValue[10][0],
-              modelo1: cellValue[83][0],
-              precio1: cellValue[83][1],
-              modelo2: cellValue[84][0],
-              precio2: cellValue[84][1],
-              modelo3: cellValue[85][0],
-              precio3: cellValue[85][1],
-              // customize: cellValue[44][0],
-              // customizePrice: cellValue[44][1],
-              // // en comun
-              // descuentosSubtitle: cellValue[17][0],
-              // descuento1: cellValue[18][0],
-              // descuento2: cellValue[19][0],
-              // descuento3: cellValue[20][0],
-              // descuento4: cellValue[21][0],
+              title: cellValue[225][0],
+              subtitle1: cellValue[226][0],
+              modelo1: cellValue[227][0],
+              precio1: cellValue[227][1],
+              modelo2: cellValue[228][0],
+              precio2: cellValue[228][1],
+              modelo3: cellValue[229][0],
+              precio3: cellValue[229][1],
+              modelo4: cellValue[230][0],
+              precio4: cellValue[230][1],
+              subtitle2: cellValue[231][0],
+              label1: cellValue[232][0],
+              label2: cellValue[233][0],
+              label3: cellValue[234][0],
+              label4: cellValue[235][0],
             }}
           />
         ) : (
@@ -575,7 +583,7 @@ export default function Home() {
       </div>
 
       <section className='bannerLogosSection'>
-        <h1 style={{fontSize:'20px'}}>Confían en nosotros</h1>
+        <h1 style={{ fontSize: '20px' }}>Confían en nosotros</h1>
         <div className='bannerLogoSectionContainer'>
           {imageNames.map((imageName, index) => (
             <div className='logoMarcasContainer'>
