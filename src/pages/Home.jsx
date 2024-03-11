@@ -51,7 +51,7 @@ export default function Home() {
   const scrollToRef = (ref) => ref.current.scrollIntoView();
 
   useEffect(() => {
-    fetchSheetData(import.meta.env.SPREADSHEET_ID, 'Hoja 1', import.meta.env.API_KEY)
+    fetchSheetData(import.meta.env.VITE_SPREADSHEET_ID, 'Hoja 1', import.meta.env.VITE_API_KEY)
       .then((data) => {
         console.log('datos', data);
         if (data?.values && data.values.length > 0) {
