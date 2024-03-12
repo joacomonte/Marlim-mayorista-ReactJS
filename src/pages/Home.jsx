@@ -24,7 +24,7 @@ const generateChunks = (data) => {
     let chunkIndex = 0;
     for (let i = 0; i < data.values.length; i += 15) {
       const chunk = data.values.slice(i, i + 11);
-      if (chunk.length > 0) {
+      if (chunk.length === 11) {
         chunks.push(chunk);
         chunkIndex++;
       }
