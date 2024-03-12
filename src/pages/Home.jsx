@@ -111,18 +111,18 @@ export default function Home() {
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
 
-  const spread = '1LTNw_zehKCxHSIizu2YT8d_PN-agX2uJxn9ZGMnJan4';
+  // const spread = '1LTNw_zehKCxHSIizu2YT8d_PN-agX2uJxn9ZGMnJan4';
 
-  const key = 'AIzaSyD896qSVu6moxcIbjp77cfnDDLA2r4hlFA';
+  // const key = 'AIzaSyD896qSVu6moxcIbjp77cfnDDLA2r4hlFA';
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchDataFromSpreadsheet(
-        spread,
-        // import.meta.env.VITE_SPREADSHEET_ID,
+        // spread,
+        import.meta.env.VITE_SPREADSHEET_ID,
         'Hoja 1',
-        key
-        // import.meta.env.VITE_API_KEY
+        // key
+        import.meta.env.VITE_API_KEY
       );
 
       if (data) {
