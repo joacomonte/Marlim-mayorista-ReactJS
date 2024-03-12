@@ -35,16 +35,12 @@ const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
 
 const generateChunks = (data) => {
   const chunks = [];
-
   if (data?.values && data.values.length > 0) {
-    for (let i = 0; i < data.values.length; i += 15) {
-      const chunk = data.values.slice(i, i + 15);
-      if (chunk.length > 0) {
-        chunks.push(chunk);
-      }
+    for (let i = 0; i < data.values.length; i += 11) {
+      const chunk = data.values.slice(i, i + 11);
+      chunks.push(chunk);
     }
   }
-
   return chunks;
 };
 
