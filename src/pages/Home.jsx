@@ -53,9 +53,9 @@ export default function Home() {
   ];
 
   const cardIMGs = [
-    ['rec1.jpg', 'rec2.jpg'], //card 1
-    ['cor1.jpg', 'cor2.jpg'], // card 2
-    ['cur.jpg'],
+    ['rec.jpg'], //card 1
+    ['cor.jpg'], // card 2
+    ['cur.jpg'], //
     ['inox.jpg'],
     ['bomb.jpg'],
     ['limp.jpg'],
@@ -196,33 +196,31 @@ export default function Home() {
       </div>
 
       <div className='cardsContainer'>
-        <div>
-          {Array.isArray(cellValue) &&
-            cellValue.map((chunk, index) => (
-              <GenericCard
-                key={index}
-                cell={{
-                  img: cardIMGs[index],
-                  title: chunk[0][0],
-                  subtitle1: chunk[1][0],
-                  modelo1: chunk[2][0],
-                  precio1: chunk[2][1],
-                  modelo2: chunk[3][0],
-                  precio2: chunk[3][1],
-                  modelo3: chunk[4][0],
-                  precio3: chunk[4][1],
-                  modelo4: chunk[5][0],
-                  precio4: chunk[5][1],
-                  subtitle2: chunk[6][0],
-                  label1: chunk[7][0],
-                  label2: chunk[8][0],
-                  label3: chunk[9][0],
-                  label4: chunk[10][0],
-                }}
-              />
-            ))}
-          {!Array.isArray(cellValue) && <LoadingCard />}
-        </div>
+        {Array.isArray(cellValue) &&
+          cellValue.map((chunk, index) => (
+            <GenericCard
+              key={index}
+              cell={{
+                img: cardIMGs[index],
+                title: chunk[0][0],
+                subtitle1: chunk[1][0],
+                modelo1: chunk[2][0],
+                precio1: chunk[2][1],
+                modelo2: chunk[3][0],
+                precio2: chunk[3][1],
+                modelo3: chunk[4][0],
+                precio3: chunk[4][1],
+                modelo4: chunk[5][0],
+                precio4: chunk[5][1],
+                subtitle2: chunk[6][0],
+                label1: chunk[7][0],
+                label2: chunk[8][0],
+                label3: chunk[9][0],
+                label4: chunk[10][0],
+              }}
+            />
+          ))}
+        {!Array.isArray(cellValue) && <LoadingCard />}
       </div>
 
       <section className='bannerLogosSection'>
