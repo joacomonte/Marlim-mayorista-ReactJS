@@ -56,6 +56,35 @@ export default function Home() {
   const cardIMGs = [
     ['rec1.jpg', 'rec2.jpg'], //card 1
     ['cor1.jpg', 'cor2.jpg'], // card 2
+    ['cur.jpg'],
+    ['inox.jpg'],
+    ['bomb.jpg'],
+    ['limp.jpg'],
+    ['est.jpg', 'est pers.jpg'],
+    ['10.jpg'],
+    ['kit4.jpg'],
+    ['IMG_85857.png'],
+    ['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'],
+    ['ex kit.jpg'],
+    ['IMG_9520.jpg'],
+    ['343813454_191905643672724_808407925404404510_n.jpg'],
+    ['343813454_191905643672724_808407925404404510_n.jpg'],
+    [
+      'IMG_6824.jpg',
+      '1234567.jpg',
+      '123.jpg',
+      '123456.jpg',
+      'IMG_8361.jpg',
+      '12345.jpg',
+      '0123456.jpg',
+      '01234.jpg',
+      '0123.jpg',
+      '18.jpg',
+      '1234.jpg',
+      '012.jpg',
+      '12345678.jpg',
+      '01.jpg',
+    ],
   ];
 
   useEffect(() => {
