@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 //helpers
 import fetchSheetData from '../helpers/fetchSheetData';
-
 // components
 import MenuTile from '../components/MenuTile';
 import LoadingCard from '../components/LoadingCard';
