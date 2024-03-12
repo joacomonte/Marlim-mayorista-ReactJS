@@ -18,33 +18,32 @@ const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
   }
 };
 
-// const generateChunks = (data) => {
-//   const chunks = [];
-//   if (data?.values && data.values.length > 0) {
-//     let chunkIndex = 0;
-//     for (let i = 0; i < data.values.length; i += 15) {
-//       const chunk = data.values.slice(i, i + 11);
-//       if (chunk.length === 11) {
-//         chunks.push(chunk);
-//         chunkIndex++;
-//       }
-//     }
-//   }
-//   return chunks;
-// };
-
 const generateChunks = (data) => {
   const chunks = [];
   if (data?.values && data.values.length > 0) {
-    for (let i = 0; i < data.values.length; i += 11) {
+    let chunkIndex = 0;
+    for (let i = 0; i < data.values.length; i += 15) {
       const chunk = data.values.slice(i, i + 11);
-      chunks.push(chunk);
+      if (chunk.length === 11) {
+        chunks.push(chunk);
+        chunkIndex++;
+      }
     }
   }
   return chunks;
 };
 
 export default function Home() {
+  //useRefs
+  const aluminioRef = useRef();
+  const inoxiRef = useRef();
+  const bombillasRef = useRef();
+  const limpiadorRef = useRef();
+  const estucheRef = useRef();
+  const gondolaRef = useRef();
+  const mostradorRef = useRef();
+  const personalizadosRef = useRef();
+
   const imageNames = [
     'merle.png',
     'ferchetto.png',
@@ -64,36 +63,39 @@ export default function Home() {
   ];
 
   const cardIMGs = [
-    ['rec.jpg'], //card 1
-    ['cor.jpg'], // card 2
-    ['cur.jpg'], //
-    ['inox.jpg'],
-    ['bomb.jpg'],
-    ['limp.jpg'],
-    ['est.jpg', 'est pers.jpg'],
-    ['10.jpg'],
-    ['kit4.jpg'],
-    ['IMG_85857.png'],
-    ['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'],
-    ['ex kit.jpg'],
-    ['IMG_9520.jpg'],
-    ['343813454_191905643672724_808407925404404510_n.jpg'],
-    ['343813454_191905643672724_808407925404404510_n.jpg'],
+    [['rec.jpg'], aluminioRef], // Sorbetes 21cm - Aluminio anodizado
+    [['cor.jpg']], // Sorbetes de aluminio anodizado
+    [['cur.jpg']], // Sorbetes de aluminio anodizado
+    [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
+    [['bomb.jpg'], bombillasRef], // Bombillas de aluminio anodizado
+    [['limp.jpg'], limpiadorRef], // Mate de Acero Inoxidable
+    [['est.jpg', 'est pers.jpg'], estucheRef], // Limpiador de cerda
+    [['10.jpg']], // Estuche de viaje - Cartón compacto
+    [['kit4.jpg'], gondolaRef], // Estuche góndola - Cartulina
+    [['IMG_85857.png']], // Estuche góndola - Cartulina
+    [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png']], // Estuche góndola - Cartulina
+    [['ex kit.jpg'], mostradorRef], // Exhibidor fibrofacil laminado
+    [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
+    [['343813454_191905643672724_808407925404404510_n.jpg'], mostradorRef], // Exhibidor fibrofacil laminado
+    [['343813454_191905643672724_808407925404404510_n.jpg']], // Exhibidor fibrofacil laminado
     [
-      'IMG_6824.jpg',
-      '1234567.jpg',
-      '123.jpg',
-      '123456.jpg',
-      'IMG_8361.jpg',
-      '12345.jpg',
-      '0123456.jpg',
-      '01234.jpg',
-      '0123.jpg',
-      '18.jpg',
-      '1234.jpg',
-      '012.jpg',
-      '12345678.jpg',
-      '01.jpg',
+      [
+        'IMG_6824.jpg',
+        '1234567.jpg',
+        '123.jpg',
+        '123456.jpg',
+        'IMG_8361.jpg',
+        '12345.jpg',
+        '0123456.jpg',
+        '01234.jpg',
+        '0123.jpg',
+        '18.jpg',
+        '1234.jpg',
+        '012.jpg',
+        '12345678.jpg',
+        '01.jpg',
+      ],
+      personalizadosRef,
     ],
   ];
 
@@ -104,27 +106,23 @@ export default function Home() {
   // default value before fetch
   const [cellValue, setCellValue] = useState('Cargando datos...');
 
-  //useRefs
-  const aluminioRef = useRef();
-  const inoxiRef = useRef();
-  const bombillasRef = useRef();
-  const limpiadorRef = useRef();
-  const estucheRef = useRef();
-  const gondolaRef = useRef();
-  const mostradorRef = useRef();
-  const personalizadosRef = useRef();
-
   //testing rebase
 
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
 
+  const spread = '1LTNw_zehKCxHSIizu2YT8d_PN-agX2uJxn9ZGMnJan4';
+
+  const key = 'AIzaSyD896qSVu6moxcIbjp77cfnDDLA2r4hlFA';
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchDataFromSpreadsheet(
-        import.meta.env.VITE_SPREADSHEET_ID,
+        spread,
+        // import.meta.env.VITE_SPREADSHEET_ID,
         'Hoja 1',
-        import.meta.env.VITE_API_KEY
+        key
+        // import.meta.env.VITE_API_KEY
       );
 
       if (data) {
@@ -211,8 +209,9 @@ export default function Home() {
           cellValue.map((chunk, index) => (
             <GenericCard
               key={index}
+              ref={cardIMGs[index][1] ? cardIMGs[index][1] : null}
               cell={{
-                img: cardIMGs[index],
+                img: cardIMGs[index][0],
                 title: chunk[0][0],
                 subtitle1: chunk[1][0],
                 modelo1: chunk[2][0],
