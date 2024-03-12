@@ -67,7 +67,9 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Pagina en reparación</h1>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+        <h1 style={{ fontSize: '2em' }}>Pagina en reparación</h1>
+      </div>
     </main>
   );
 }
