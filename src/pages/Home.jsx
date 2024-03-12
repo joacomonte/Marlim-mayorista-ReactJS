@@ -21,17 +21,35 @@ const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
 const generateChunks = (data) => {
   const chunks = [];
   if (data?.values && data.values.length > 0) {
-    let chunkIndex = 0;
-    for (let i = 0; i < data.values.length; i += 15) {
-      const chunk = data.values.slice(i, i + 11);
+    let chunkStart = 0;
+    while (chunkStart < data.values.length) {
+      const chunk = data.values.slice(chunkStart, chunkStart + 11);
       if (chunk.length === 11) {
         chunks.push(chunk);
-        chunkIndex++;
+        chunkStart += 15;
+      } else {
+        chunks.push(chunk);
+        break;
       }
     }
   }
   return chunks;
 };
+
+// const generateChunks = (data) => {
+//   const chunks = [];
+//   if (data?.values && data.values.length > 0) {
+//     let chunkIndex = 0;
+//     for (let i = 0; i < data.values.length; i += 15) {
+//       const chunk = data.values.slice(i, i + 11);
+//       if (chunk.length === 11) {
+//         chunks.push(chunk);
+//         chunkIndex++;
+//       }
+//     }
+//   }
+//   return chunks;
+// };
 
 export default function Home() {
   const imageNames = [
