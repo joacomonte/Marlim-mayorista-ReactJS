@@ -10,8 +10,14 @@ import GenericCard from '../components/GenericCard';
 
 const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
   try {
-    const response = await fetchSheetData(spreadsheetId, sheetName, apiKey);
-    return response;
+    const response = await fetch('/.netlify/functions/fetchSheetData', {
+      method: 'POST',
+      body: JSON.stringify({ sheetId: spreadsheetId, range: sheetName, apiKey }),
+    });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data from serverless function. Status: ${response.status}.`);
+    }
+    return response.json();
   } catch (error) {
     console.error('Error al cargar datos:', error);
     return null;
