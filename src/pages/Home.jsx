@@ -12,7 +12,7 @@ const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
   try {
     const response = await fetch('/.netlify/functions/fetchSheetData', {
       method: 'POST',
-      body: JSON.stringify({ sheetId: spreadsheetId, range: sheetName, apiKey }),
+      body: JSON.stringify({ sheetId: spreadsheetId, range: sheetName }),
     });
     if (!response.ok) {
       throw new Error(`Failed to fetch data from serverless function. Status: ${response.status}.`);
@@ -106,30 +106,20 @@ export default function Home() {
     ],
   ];
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-
   // default value before fetch
   const [cellValue, setCellValue] = useState('Cargando datos...');
 
-  // //testing rebase
-
   // scrolls to the ref and then does a top margin correction
   const scrollToRef = (ref) => ref.current.scrollIntoView();
-
-  // const spread = '1LTNw_zehKCxHSIizu2YT8d_PN-agX2uJxn9ZGMnJan4';
-
-  // const key = 'AIzaSyD896qSVu6moxcIbjp77cfnDDLA2r4hlFA';
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchDataFromSpreadsheet(
         // spread,
         import.meta.env.VITE_SPREADSHEET_ID,
-        'Hoja 1',
+        'Hoja 1'
         // key
-        import.meta.env.VITE_API_KEY
+        // import.meta.env.VITE_API_KEY
       );
 
       if (data) {

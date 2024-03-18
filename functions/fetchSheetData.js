@@ -1,7 +1,9 @@
 const axios = require('axios');
 
-exports.handler = async function(event, context) {
-  const { sheetId, range, apiKey } = JSON.parse(event.body);
+//   const { sheetId, range, apiKey } = JSON.parse(event.body);
+exports.handler = async function (event, context) {
+  const { sheetId, range } = JSON.parse(event.body);
+  const apiKey = process.env.VITE_API_KEY;
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
 
   try {
