@@ -74,16 +74,20 @@ export default function Home() {
     [['cor.jpg']], // Sorbetes de aluminio anodizado
     [['cur.jpg']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
-    [['bomb.jpg'], bombillasRef], // Bombillas de aluminio anodizado
-    [['limp.jpg'], limpiadorRef], // Mate de Acero Inoxidable
+    [['IMG_8587.jpg']], // Bombillas Aluminio con Resorte
+    [['']], // Bombillas Chata Aluminio Anodizado
+    [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm Diseños
+    [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm (Personalizable)
+    [['IMG_8002.jpg', 'IMG_8001.jpg']], // Mate Inox y Bombi 15cm Diseños
+    [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
     [['est.jpg', 'est pers.jpg'], estucheRef], // Limpiador de cerda
     [['10.jpg']], // Estuche de viaje - Cartón compacto
     [['kit4.jpg'], gondolaRef], // Estuche góndola - Cartulina
     [['IMG_85857.png']], // Estuche góndola - Cartulina
-    [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png']], // Estuche góndola - Cartulina
-    [['ex kit.jpg'], mostradorRef], // Exhibidor fibrofacil laminado
-    [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
-    [['343813454_191905643672724_808407925404404510_n.jpg'], mostradorRef], // Exhibidor fibrofacil laminado
+    [['IMG_8587.jpg' ]], // Estuche góndola - Cartulina
+    [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
+    [['ex kit.jpg']], // Exhibidor fibrofacil laminado
+    [['IMG_9520.jpg'], mostradorRef], // Exhibidor fibrofacil laminado
     [['343813454_191905643672724_808407925404404510_n.jpg']], // Exhibidor fibrofacil laminado
     [
       [
