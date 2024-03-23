@@ -74,7 +74,7 @@ export default function Home() {
     [['cor.jpg']], // Sorbetes de aluminio anodizado
     [['cur.jpg']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
-    [['IMG_8587.jpg']], // Bombillas Aluminio con Resorte
+    [['bomb.jpg']], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata Aluminio Anodizado
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm Diseños
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm (Personalizable)
