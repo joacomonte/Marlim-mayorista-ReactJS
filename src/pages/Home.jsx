@@ -80,10 +80,10 @@ export default function Home() {
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm (Personalizable)
     [['IMG_8002.jpg', 'IMG_8001.jpg']], // Mate Inox y Bombi 15cm Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
-    [['est.jpg', 'est pers.jpg'], estucheRef], // Limpiador de cerda
-    [['10.jpg']], // Estuche de viaje - Cartón compacto
-    [['kit4.jpg'], gondolaRef], // Estuche góndola - Cartulina
-    [['IMG_85857.png']], // Estuche góndola - Cartulina
+    [['img_8406'], estucheRef], // Limpiador de cerda
+    [['est.jpg', 'est pers.jpg']], // Estuche de viaje - Cartón compacto
+    [['10.jpg'], gondolaRef], // Estuche góndola - Cartulina
+    [['kit4.jpg']], // Estuche góndola - Cartulina
     [['IMG_8587.jpg' ]], // Estuche góndola - Cartulina
     [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
     [['ex kit.jpg']], // Exhibidor fibrofacil laminado
@@ -95,17 +95,12 @@ export default function Home() {
         '1234567.jpg',
         '123.jpg',
         '123456.jpg',
-        'IMG_8361.jpg',
         '12345.jpg',
         '0123456.jpg',
-        '01234.jpg',
-        '0123.jpg',
-        '18.jpg',
         '1234.jpg',
         '012.jpg',
         '12345678.jpg',
-        '01.jpg',
-      ],
+        ],
       personalizadosRef,
     ],
   ];
