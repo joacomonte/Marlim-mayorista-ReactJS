@@ -80,7 +80,7 @@ export default function Home() {
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm (Personalizable)
     [['IMG_8002.jpg', 'IMG_8001.jpg']], // Mate Inox y Bombi 15cm Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
-    [['img_8406'], estucheRef], // Limpiador de cerda
+    [['img_8406.jpg'], estucheRef], // Limpiador de cerda
     [['est.jpg', 'est pers.jpg']], // Estuche de viaje - Cartón compacto
     [['10.jpg'], gondolaRef], // Estuche góndola - Cartulina
     [['kit4.jpg']], // Estuche góndola - Cartulina
