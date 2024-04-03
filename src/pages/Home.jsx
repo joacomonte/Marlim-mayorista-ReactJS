@@ -77,15 +77,15 @@ export default function Home() {
     [['cor.jpg']], // Sorbetes de aluminio anodizado
     [['cur.jpg']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
-    [['bomb.jpg']], // Bombillas Aluminio con Resorte
+    [['bomb.jpg'], bombillasRef], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata Aluminio Anodizado
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm (Personalizable)
     [['IMG_8002.jpg', 'IMG_8001.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
-    [['est.jpg', 'est pers.jpg']], // Estuche de viaje - Cartón compacto
-    [['10.jpg'], gondolaRef], // Estuche góndola - Cartulina
+    [['est.jpg', 'est pers.jpg'], estucheRef], // Estuche de viaje - Cartón compacto
+    [['10.jpg']], // Estuche góndola - Cartulina
     [['kit4.jpg']], // Estuche góndola - Cartulina
     [['IMG_8587.jpg']], // Estuche góndola - Cartulina
     [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
 
         {/* Exhibidores para góndola */}
-        <div onClick={() => scrollToRef(limpiadorRef)}>
+        <div onClick={() => scrollToRef(estucheRef)}>
           <MenuTile bgcolor='#1A4BB2' title={'Estuche y Limpiador'} />
         </div>
 
