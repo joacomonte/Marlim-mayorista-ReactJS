@@ -50,6 +50,9 @@ export default function Home() {
   const gondolaRef = useRef();
   const mostradorRef = useRef();
   const personalizadosRef = useRef();
+  const mateRef = useRef();
+  const limpiaCerdaRef = useRef();
+  const vasoRef = useRef();
 
   const imageNames = [
     'merle.png',
@@ -76,18 +79,18 @@ export default function Home() {
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
     [['bomb.jpg']], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata Aluminio Anodizado
-    [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm Diseños
+    [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg']], // Vaso Inox y Sorbete 21cm (Personalizable)
-    [['IMG_8002.jpg', 'IMG_8001.jpg']], // Mate Inox y Bombi 15cm Diseños
+    [['IMG_8002.jpg', 'IMG_8001.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
-    [['img_8406.jpg'], estucheRef], // Limpiador de cerda
+    [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
     [['est.jpg', 'est pers.jpg']], // Estuche de viaje - Cartón compacto
     [['10.jpg'], gondolaRef], // Estuche góndola - Cartulina
     [['kit4.jpg']], // Estuche góndola - Cartulina
-    [['IMG_8587.jpg' ]], // Estuche góndola - Cartulina
+    [['IMG_8587.jpg']], // Estuche góndola - Cartulina
     [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
     [['ex kit.jpg']], // Exhibidor fibrofacil laminado
-    [['IMG_9520.jpg'], mostradorRef], // Exhibidor fibrofacil laminado
+    [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
     [['343813454_191905643672724_808407925404404510_n.jpg']], // Exhibidor fibrofacil laminado
     [
       [
@@ -100,7 +103,7 @@ export default function Home() {
         '1234.jpg',
         '012.jpg',
         '12345678.jpg',
-        ],
+      ],
       personalizadosRef,
     ],
   ];
@@ -160,18 +163,18 @@ export default function Home() {
         </div>
 
         {/* Limpiador de cerda */}
-        <div onClick={() => scrollToRef(limpiadorRef)}>
-          <MenuTile bgcolor='#FF8AC5' title={'Limpiador de cerda'} />
+        <div onClick={() => scrollToRef(vasoRef)}>
+          <MenuTile bgcolor='#FF8AC5' title={'Vasos'} />
         </div>
 
         {/* Estuche de viaje */}
-        <div onClick={() => scrollToRef(estucheRef)}>
-          <MenuTile bgcolor='#ED12ED' title={'Estuche de viaje'} />
+        <div onClick={() => scrollToRef(mateRef)}>
+          <MenuTile bgcolor='#ED12ED' title={'Mates'} />
         </div>
 
         {/* Exhibidores para góndola */}
-        <div onClick={() => scrollToRef(gondolaRef)}>
-          <MenuTile bgcolor='#1A4BB2' title={'Exhibidores góndola'} />
+        <div onClick={() => scrollToRef(limpiadorRef)}>
+          <MenuTile bgcolor='#1A4BB2' title={'Estuche y Limpiador'} />
         </div>
 
         {/* Exhibidores para mostrador */}
