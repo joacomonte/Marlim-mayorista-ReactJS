@@ -253,18 +253,18 @@ body {
   display: flex;
   flex-direction: column;
 
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 
-  padding-bottom: 20px;
+
   color:black;
   width: 95%;
   max-width: 500px;
-  height: 800px;
+  height: 740px;
   background-color: white;
   border-radius: 15px;
-  margin: 50px 0px;
+  margin: 30px 0px;
 
   scroll-margin: 80px;
 }
@@ -289,7 +289,6 @@ body {
 
 .genericCard__imgContainer{
   width: 100%;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }

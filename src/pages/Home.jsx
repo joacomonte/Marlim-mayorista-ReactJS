@@ -179,7 +179,7 @@ export default function Home() {
 
         {/* Exhibidores para mostrador */}
         <div onClick={() => scrollToRef(mostradorRef)}>
-          <MenuTile bgcolor='#0AB8F8' title={'Exhibidores mostrador'} />
+          <MenuTile bgcolor='#0AB8F8' title={'Exhibidores'} />
         </div>
 
         {/* Personalizaciones */}
