@@ -56,17 +56,17 @@ const GenericCard = ({ cell }, ref) => {
         {subtitle1 && <h2>{subtitle1}</h2>}
         {modelo1 && (
           <p>
-            {modelo1}: {precio1}
+            {modelo1} {precio1}
           </p>
         )}
         {modelo2 && (
           <p>
-            {modelo2}: {precio2}
+            {modelo2} {precio2}
           </p>
         )}
         {modelo3 && (
           <p>
-            {modelo3}: {precio3}
+            {modelo3} {precio3}
           </p>
         )}
         {modelo4 && (
