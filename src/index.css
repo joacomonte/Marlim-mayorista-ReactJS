@@ -94,6 +94,8 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   font-style: inherit;
   text-decoration: none;
   color: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 /* Evitamos problemas con los pseudoelementos de quotes */
@@ -255,12 +257,11 @@ body {
   align-items: center;
   text-align: center;
 
-
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   color:black;
-  width: 90%;
+  width: 95%;
   max-width: 500px;
-  height: 900px;
+  height: 800px;
   background-color: white;
   border-radius: 15px;
   margin: 50px 0px;
@@ -271,15 +272,16 @@ body {
 .genericCard h1{
   font-size: 1.5em; 
   font-weight: bold;
-  padding: 1.5em;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   line-height: 1.5;
 }
 
 .genericCard h2{
   font-size: 1em; 
   font-weight: bold; 
-  padding-top: 2em ;
-  padding-bottom: 0.5em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .genericCard p{
   font-size: clamp(0.7em, 3.3vw, 1em);
