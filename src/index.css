@@ -291,6 +291,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
+  min-height: 350px;
 }
 .genericCard__imgContainer img{
   object-fit: contain;
