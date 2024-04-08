@@ -80,7 +80,7 @@ export default function Home() {
     [['bomb.jpg'], bombillasRef], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata Aluminio Anodizado
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg', 'vaca.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
-    [['vaso waterdog arena.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog negro.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
+    [['vaso waterdog negro.jpg', 'vaso waterdog arena.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
     [['IMG_8002.jpg', 'IMG_8001.jpg', 'mn.jpg', 'mb.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
