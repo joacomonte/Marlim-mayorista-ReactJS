@@ -97,7 +97,7 @@ export default function Home() {
         'IMG_6824.jpg',
         '1234567.jpg',
         '123.jpg',
-        'img_8361.jpg'
+        'img_8361.jpg',
         '123456.jpg',
         '12345.jpg',
         '0123456.jpg',
