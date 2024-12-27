@@ -9,24 +9,34 @@ import LoadingCard from '../components/LoadingCard';
 import GenericCard from '../components/GenericCard';
 
 const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
-  try {
-    const response = await fetch('/.netlify/functions/fetchSheetData', {
-      method: 'POST',
-      body: JSON.stringify({ sheetId: spreadsheetId, range: sheetName }),
-    });
-    if (!response.ok) {
-      throw new Error(`Failed to fetch data from serverless function. Status: ${response.status}.`);
+  const tryFetch = async () => {
+    try {
+      const response = await fetch('/.netlify/functions/fetchSheetData', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sheetId: spreadsheetId, range: sheetName }),
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to fetch data from serverless function. Status: ${response.status}.`);
+      }
+      return response.json();
+    } catch (error) {
+      console.error('Error al cargar datos:', error);
+      return null;
     }
-    return response.json();
-  } catch (error) {
-    console.error('Error al cargar datos:', error);
-    return null;
+  };
+
+  let result = await tryFetch();
+  if (!result) {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    result = await tryFetch();
   }
+  
+  return result;
 };
 
 const generateChunks = (data) => {
   const chunks = [];
-
   if (data?.values && data.values.length > 0) {
     for (let i = 0; i < data.values.length; i += 15) {
       const chunk = data.values.slice(i, i + 11);
@@ -36,7 +46,6 @@ const generateChunks = (data) => {
       }
     }
   }
-
   return chunks;
 };
 
@@ -81,7 +90,7 @@ export default function Home() {
     [['']], // Bombillas Chata Aluminio Anodizado
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
-    ['IMG_9708.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
+    [['IMG_9708.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
     [['est.jpg', 'est pers.jpg'], estucheRef], // Estuche de viaje - Cartón compacto
