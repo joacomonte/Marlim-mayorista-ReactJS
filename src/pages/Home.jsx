@@ -85,9 +85,9 @@ export default function Home() {
     [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
     [['est.jpg', 'est pers.jpg'], estucheRef], // Estuche de viaje - Cartón compacto
-    [['10.jpg']], // Estuche góndola - Cartulina
-    [['kit4.jpg']], // Estuche góndola - Cartulina
-    [['IMG_0703.jpg']], // Estuche góndola - Cartulina
+    [['IMG_0649.jpg']], // Estuche góndola - Cartulina
+    [['IMG_9668.jpg']], // Estuche góndola - Cartulina
+    [['IMG_0692.jpg']], // Estuche góndola - Cartulina
     [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
     [['ex kit.jpg']], // Exhibidor fibrofacil laminado
     [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
