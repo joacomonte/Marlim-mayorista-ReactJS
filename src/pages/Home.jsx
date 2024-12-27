@@ -73,11 +73,11 @@ export default function Home() {
   ];
 
   const cardIMGs = [
-    [['rec.jpg'], aluminioRef], // Sorbetes 21cm - Aluminio anodizado
-    [['cor.jpg']], // Sorbetes de aluminio anodizado
-    [['cur.jpg']], // Sorbetes de aluminio anodizado
+    [['IMG_0752.jpg'], aluminioRef], // Sorbetes 21cm - Aluminio anodizado
+    [['IMG_0766.png']], // Sorbetes de aluminio anodizado
+    [['IMG_0773.png']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
-    [['bomb.jpg'], bombillasRef], // Bombillas Aluminio con Resorte
+    [['IMG_0727.png'], bombillasRef], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata Aluminio Anodizado
     [['IMG_8216.jpg', 'IMG_8211.jpg', 'IMG_8206.jpg', 'vaca.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog arena.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
@@ -87,7 +87,7 @@ export default function Home() {
     [['est.jpg', 'est pers.jpg'], estucheRef], // Estuche de viaje - Cartón compacto
     [['10.jpg']], // Estuche góndola - Cartulina
     [['kit4.jpg']], // Estuche góndola - Cartulina
-    [['IMG_8587.jpg']], // Estuche góndola - Cartulina
+    [['IMG_0703.jpg']], // Estuche góndola - Cartulina
     [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
     [['ex kit.jpg']], // Exhibidor fibrofacil laminado
     [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
