@@ -28,19 +28,19 @@ const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
 
   let result = await tryFetch();
   if (!result) {
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     result = await tryFetch();
   }
-  
+
   return result;
 };
 
 const generateChunks = (data) => {
   const chunks = [];
-  console.log("Input Data:", data); // Log the input data
+  console.log('Input Data:', data); // Log the input data
 
   if (data?.values && data.values.length > 0) {
-    console.log("Valid values array:", data.values); // Log the valid values array
+    console.log('Valid values array:', data.values); // Log the valid values array
 
     for (let i = 0; i < data.values.length; i += 15) {
       console.log(`Iteration ${i / 15 + 1}: Starting at index ${i}`); // Log iteration number and start index
@@ -50,16 +50,16 @@ const generateChunks = (data) => {
 
       if (chunk.length === 11) {
         chunks.push(chunk);
-        console.log("Added chunk:", chunk); // Log when a chunk is added
+        console.log('Added chunk:', chunk); // Log when a chunk is added
       } else {
-        console.log("Skipped chunk (length != 11):", chunk); // Log skipped chunks
+        console.log('Skipped chunk (length != 11):', chunk); // Log skipped chunks
       }
     }
   } else {
-    console.log("No valid values array found."); // Log if the values array is invalid or empty
+    console.log('No valid values array found.'); // Log if the values array is invalid or empty
   }
 
-  console.log("Final chunks:", chunks); // Log the final chunks array
+  console.log('Final chunks:', chunks); // Log the final chunks array
   return chunks;
 };
 
@@ -129,6 +129,8 @@ export default function Home() {
         'Imagen de WhatsApp 2024-11-21 a las 12.01.25_72d1f572.jpg',
       ],
       personalizadosRef,
+      [['']],
+      [['']],
     ],
   ];
 
@@ -146,7 +148,6 @@ export default function Home() {
         'Hoja 1'
         // key
         // import.meta.env.VITE_API_KEY
-        
       );
       console.log('data', data);
 
@@ -234,24 +235,24 @@ export default function Home() {
           cellValue.map((chunk, index) => (
             <GenericCard
               key={index}
-              ref={cardIMGs[index][1] ? cardIMGs[index][1] : null}
+              ref={cardIMGs[index]?.[1] ?? null} // Optional chaining for ref
               cell={{
-                img: cardIMGs[index][0],
-                title: chunk[0][0],
-                subtitle1: chunk[1][0],
-                modelo1: chunk[2][0],
-                precio1: chunk[2][1],
-                modelo2: chunk[3][0],
-                precio2: chunk[3][1],
-                modelo3: chunk[4][0],
-                precio3: chunk[4][1],
-                modelo4: chunk[5][0],
-                precio4: chunk[5][1],
-                subtitle2: chunk[6][0],
-                label1: chunk[7][0],
-                label2: chunk[8][0],
-                label3: chunk[9][0],
-                label4: chunk[10][0],
+                img: cardIMGs[index]?.[0] ?? '', // Default to empty string if undefined
+                title: chunk?.[0]?.[0] ?? '', // Optional chaining with fallback
+                subtitle1: chunk?.[1]?.[0] ?? '',
+                modelo1: chunk?.[2]?.[0] ?? '',
+                precio1: chunk?.[2]?.[1] ?? '',
+                modelo2: chunk?.[3]?.[0] ?? '',
+                precio2: chunk?.[3]?.[1] ?? '',
+                modelo3: chunk?.[4]?.[0] ?? '',
+                precio3: chunk?.[4]?.[1] ?? '',
+                modelo4: chunk?.[5]?.[0] ?? '',
+                precio4: chunk?.[5]?.[1] ?? '',
+                subtitle2: chunk?.[6]?.[0] ?? '',
+                label1: chunk?.[7]?.[0] ?? '',
+                label2: chunk?.[8]?.[0] ?? '',
+                label3: chunk?.[9]?.[0] ?? '',
+                label4: chunk?.[10]?.[0] ?? '',
               }}
             />
           ))}
