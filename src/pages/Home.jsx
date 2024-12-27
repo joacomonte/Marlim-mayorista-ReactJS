@@ -37,15 +37,29 @@ const fetchDataFromSpreadsheet = async (spreadsheetId, sheetName, apiKey) => {
 
 const generateChunks = (data) => {
   const chunks = [];
+  console.log("Input Data:", data); // Log the input data
+
   if (data?.values && data.values.length > 0) {
+    console.log("Valid values array:", data.values); // Log the valid values array
+
     for (let i = 0; i < data.values.length; i += 15) {
+      console.log(`Iteration ${i / 15 + 1}: Starting at index ${i}`); // Log iteration number and start index
+
       const chunk = data.values.slice(i, i + 11);
+      console.log(`Chunk from index ${i} to ${i + 11}:`, chunk); // Log the current chunk
 
       if (chunk.length === 11) {
         chunks.push(chunk);
+        console.log("Added chunk:", chunk); // Log when a chunk is added
+      } else {
+        console.log("Skipped chunk (length != 11):", chunk); // Log skipped chunks
       }
     }
+  } else {
+    console.log("No valid values array found."); // Log if the values array is invalid or empty
   }
+
+  console.log("Final chunks:", chunks); // Log the final chunks array
   return chunks;
 };
 
@@ -132,7 +146,9 @@ export default function Home() {
         'Hoja 1'
         // key
         // import.meta.env.VITE_API_KEY
+        
       );
+      console.log('data', data);
 
       if (data) {
         const chunks = generateChunks(data);
