@@ -72,12 +72,13 @@ export default function Home() {
     // Bombillas Chata 14cm
     [['IMG_0727.png'], bombillasRef], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata 17cm Inox
-    // Botellas Constelaciones 600ml 
+    [['IMG_1380.jpg', 'IMG_1383.jpg']],// Botellas Constelaciones 600ml 
     // Botellas Constelaciones 600ml 
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
-    [['IMG_9708.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
-    [['IMG_20221220_203943912.jpg']], // Mate Inox y Bombi 15cm (Personalizable)
+    // Mate Inox Diseños + Bombilla
+    [['IMG_9708.jpg'], mateRef], // Mate Inox Diseños
+    [['IMG_20221220_203943912.jpg']], // Mate Inox (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
     [['est.jpg', 'est pers.jpg'], estucheRef], // Estuche de viaje - Cartón compacto
     [['IMG_0649.jpg', 'IMG_0233.jpg']], // Estuche góndola - Cartulina
