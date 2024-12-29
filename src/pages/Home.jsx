@@ -69,8 +69,11 @@ export default function Home() {
     [['IMG_0766.png']], // Sorbetes de aluminio anodizado
     [['IMG_0773.png']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
+    // Bombillas Chata 14cm
     [['IMG_0727.png'], bombillasRef], // Bombillas Aluminio con Resorte
-    [['']], // Bombillas Chata Aluminio Anodizado
+    [['']], // Bombillas Chata 17cm Inox
+    // Botellas Constelaciones 600ml 
+    // Botellas Constelaciones 600ml 
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
     [['IMG_9708.jpg'], mateRef], // Mate Inox y Bombi 15cm Diseños
