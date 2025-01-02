@@ -76,7 +76,7 @@ export default function Home() {
     [['']],// Botellas Constelaciones 600ml 
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
-    [['']],// Mate Inox Diseños + Bombilla
+    [['IMG_1467.jpg', 'a.jpg', 'IMG_1471.jpg']],// Mate Inox Diseños + Bombilla
     [['IMG_9708.jpg'], mateRef], // Mate Inox Diseños
     [['IMG_20221220_203943912.jpg']], // Mate Inox (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
