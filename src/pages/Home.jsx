@@ -54,7 +54,7 @@ export default function Home() {
   const inoxiRef = useRef();
   const bombillasRef = useRef();
   const limpiadorRef = useRef();
-  const estucheRef = useRef();
+  const exhibidoresRef = useRef();
   const gondolaRef = useRef();
   const mostradorRef = useRef();
   const personalizadosRef = useRef();
@@ -69,7 +69,7 @@ export default function Home() {
     [['IMG_0766.png']], // Sorbetes de aluminio anodizado
     [['IMG_0773.png']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
-    [['']],// Bombillas Chata 14cm
+    [[''], bombillasRef],// Bombillas Chata 14cm
     [['IMG_0727.png']], // Bombillas Aluminio con Resorte
     [['']], // Bombillas Chata 17cm Inox
     [['IMG_1467.jpg', 'a.jpg', 'IMG_1471.jpg']],// Mate Inox Diseños + Bombilla
@@ -78,9 +78,9 @@ export default function Home() {
     [['IMG_1380.jpg', 'IMG_1383.jpg']],// Botellas Constelaciones 600ml 
     [['']],// Botellas Constelaciones 600ml 
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
-    [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm (Personalizable)
-    [['img_8406.jpg'], limpiaCerdaRef], // Limpiador de cerda
-    [['est.jpg', 'est pers.jpg'], estucheRef], // Estuche de viaje - Cartón compacto
+    [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm 500 (Personalizable)
+    [['img_8406.jpg'], limpiaCerdaRef ], // Limpiador de cerda/estuche de viaje
+    [['est.jpg', 'est pers.jpg'], exhibidoresRef], // Estuche de viaje - Cartón compacto
     [['IMG_0649.jpg', 'IMG_0233.jpg']], // Estuche góndola - Cartulina
     [['IMG_9668.jpg', 'IMG_0240.jpg']], // Estuche góndola - Cartulina
     [['IMG_0692.jpg']], // Estuche góndola - Cartulina
@@ -89,7 +89,7 @@ export default function Home() {
     [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
     [['343813454_191905643672724_808407925404404510_n.jpg']], // Exhibidor fibrofacil laminado
     [['IMG_6824.jpg', '1234567.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_3c461e8b.jpg', '123.jpg', '123456.jpg', '0123456.jpg', '12345.jpg', '1234.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_24bdbbaf.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_72d1f572.jpg'], personalizadosRef],
-    [['']],
+    [['']], 
     [['']],
   ];
 
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
 
         {/* Exhibidores para góndola */}
-        <div onClick={() => scrollToRef(estucheRef)}>
+        <div onClick={() => scrollToRef(exhibidoresRef)}>
           <MenuTile bgcolor='#1A4BB2' title={'Estuche y Limpiador'} />
         </div>
 
