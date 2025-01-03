@@ -61,7 +61,7 @@ export default function Home() {
   const vasoRef = useRef();
 
   const imageNames = ['merle.png', 'ferchetto.png', 'stanley.png', 'pedidos_ya.png', 'coffee_store.png', 'bosques.png', 'dd2.png', 'me_ext.png', 'borja.png', 'mies.png', 'garcia.png', 'templeton.png', 'wedrink.png', 'tiendas_green.png', 'emme.png'];
-
+//
   const cardIMGs = [
     [['IMG_0752.jpg'], aluminioRef], // Sorbetes 21cm - Aluminio anodizado
     [['IMG_0766.png']], // Sorbetes de aluminio anodizado
