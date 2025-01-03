@@ -53,10 +53,8 @@ export default function Home() {
   const aluminioRef = useRef();
   const inoxiRef = useRef();
   const bombillasRef = useRef();
-  const limpiadorRef = useRef();
+  const estuchesRef = useRef();
   const exhibidoresRef = useRef();
-  const gondolaRef = useRef();
-  const mostradorRef = useRef();
   const personalizadosRef = useRef();
   const mateRef = useRef();
   const limpiaCerdaRef = useRef();
@@ -80,11 +78,11 @@ export default function Home() {
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm 500 (Personalizable)
     [['img_8406.jpg'], limpiaCerdaRef ], // Limpiador de cerda/estuche de viaje
-    [['est.jpg', 'est pers.jpg'], exhibidoresRef], // Estuche de viaje - Cartón compacto
+    [['est.jpg', 'est pers.jpg'], estuchesRef], // Estuche de viaje - Cartón compacto
     [['IMG_0649.jpg', 'IMG_0233.jpg']], // Estuche góndola - Cartulina
     [['IMG_9668.jpg', 'IMG_0240.jpg']], // Estuche góndola - Cartulina
     [['IMG_0692.jpg']], // Estuche góndola - Cartulina
-    [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], mostradorRef], // Exhibidor fibrofacil laminado
+    [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], exhibidoresRef], // Exhibidor fibrofacil laminado
     [['ex kit.jpg']], // Exhibidor fibrofacil laminado
     [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
     [['343813454_191905643672724_808407925404404510_n.jpg']], // Exhibidor fibrofacil laminado
@@ -131,44 +129,36 @@ export default function Home() {
       </div>
 
       <div className='menuTilesContainer'>
-        {/* Sorbetes de colores - Alumino anodizado */}
         <div onClick={() => scrollToRef(aluminioRef)}>
-          <MenuTile bgcolor='#F2C819' title={'Sorbetes de colores - Alumino anodizado'} />
+          <MenuTile bgcolor='#F2C819' title={'Sorbetes de colores - Alumino anodizado'}/>
         </div>
 
-        {/* Sorbetes de acero inoxidable */}
         <div onClick={() => scrollToRef(inoxiRef)}>
-          <MenuTile bgcolor='#FF8734' title={'Sorbetes de acero inoxidable'} />
+          <MenuTile bgcolor='#FF8734' title={'Sorbetes de acero inoxidable'}/>
         </div>
 
-        {/* Bombillas para mate */}
         <div onClick={() => scrollToRef(bombillasRef)}>
-          <MenuTile bgcolor='#E74741' title={'Bombillas para mate'} />
+          <MenuTile bgcolor='#E74741' title={'Bombillas de mate'}/>
         </div>
 
-        {/* Limpiador de cerda */}
-        <div onClick={() => scrollToRef(vasoRef)}>
-          <MenuTile bgcolor='#FF8AC5' title={'Vasos'} />
-        </div>
-
-        {/* Estuche de viaje */}
         <div onClick={() => scrollToRef(mateRef)}>
-          <MenuTile bgcolor='#ED12ED' title={'Mates'} />
+          <MenuTile bgcolor='#ED12ED' title={'Mates'}/>
         </div>
 
-        {/* Exhibidores para góndola */}
+        <div onClick={() => scrollToRef(vasoRef)}>
+          <MenuTile bgcolor='#FF8AC5' title={'Botellas y Vasos'}/>
+        </div>
+
+        <div onClick={() => scrollToRef(estuchesRef)}>
+          <MenuTile bgcolor='#1A4BB2' title={'Estuche y Limpiador'}/>
+        </div>
+
         <div onClick={() => scrollToRef(exhibidoresRef)}>
-          <MenuTile bgcolor='#1A4BB2' title={'Estuche y Limpiador'} />
+          <MenuTile bgcolor='#0AB8F8' title={'Exhibidores'}/>
         </div>
 
-        {/* Exhibidores para mostrador */}
-        <div onClick={() => scrollToRef(mostradorRef)}>
-          <MenuTile bgcolor='#0AB8F8' title={'Exhibidores'} />
-        </div>
-
-        {/* Personalizaciones */}
         <div onClick={() => scrollToRef(personalizadosRef)}>
-          <MenuTile bgcolor='#85BD6B' title={'Personalizados'} />
+          <MenuTile bgcolor='#85BD6B' title={'Personalizados'}/>
         </div>
       </div>
 
