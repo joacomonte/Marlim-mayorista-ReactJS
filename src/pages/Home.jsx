@@ -76,8 +76,8 @@ export default function Home() {
     [['']],// Botellas Constelaciones 600ml 
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm 500 (Personalizable)
-    [['img_8406.jpg'], limpiaCerdaRef ], // Limpiador de cerda/estuche de viaje
     [['est.jpg', 'est pers.jpg'], estuchesRef], // Estuche de viaje - Cartón compacto
+    [['img_8406.jpg'], limpiaCerdaRef ], // Limpiador de cerda/estuche de viaje
     [['IMG_0649.jpg', 'IMG_0233.jpg']], // Estuche góndola - Cartulina
     [['IMG_9668.jpg', 'IMG_0240.jpg']], // Estuche góndola - Cartulina
     [['IMG_0692.jpg']], // Estuche góndola - Cartulina
