@@ -67,7 +67,7 @@ export default function Home() {
     [['IMG_0766.png']], // Sorbetes de aluminio anodizado
     [['IMG_0773.png']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
-    [['IMG_0727.png']], // Bombillas Aluminio con Resorte
+    [['IMG_0727.png']], // Bombillas Resorte 15cm
     [['']], // Bombillas Chata 17cm Inox
     [['IMG_1467.jpg', 'a.jpg', 'IMG_1471.jpg']],// Mate Inox Diseños + Bombilla
     [['IMG_9708.jpg'], mateRef], // Mate Inox Diseños
