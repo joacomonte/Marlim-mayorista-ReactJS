@@ -68,12 +68,12 @@ export default function Home() {
     [['IMG_0773.png']], // Sorbetes de aluminio anodizado
     [['inox.jpg'], inoxiRef], // Sorbetes de acero inoxidable
     [['IMG_0727.png']], // Bombillas Resorte 15cm
-    [['']], // Bombillas Chata 17cm Inox
+    [['IMG_1502.jpg', 'IMG_1503.jpg', 'IMG_1504.jpg', 'IMG_1505.jpg']], // Bombillas Chata 17cm Inox
     [['IMG_1467.jpg', 'a.jpg', 'IMG_1471.jpg']],// Mate Inox Diseños + Bombilla
-    [['IMG_9708.jpg'], mateRef], // Mate Inox Diseños
-    [['IMG_20221220_203943912.jpg']], // Mate Inox (Personalizable)
+    [['IMG_9708.jpg', 'IMG_1514.jpg'], mateRef], // Mate Inox Diseños
+    [['IMG_20221220_203943912.jpg', 'IMG_1508.jpg', 'IMG_1510.jpg']], // Mate Inox (Personalizable)
     [['IMG_1380.jpg', 'IMG_1383.jpg']],// Botellas Constelaciones 600ml 
-    [['']],// Botellas Constelaciones 600ml 
+    [['IMG_1513.jpg', 'IMG_1511.jpg']],// Botellas Constelaciones 600ml 
     [['IMG_8211.jpg', 'IMG_9702.jpg'], vasoRef], // Vaso Inox y Sorbete 21cm Diseños
     [['vaso waterdog negro.jpg', 'vaso waterdog blanco.jpg', 'vaso waterdog verde.png']], // Vaso Inox y Sorbete 21cm 500 (Personalizable)
     [['est.jpg', 'est pers.jpg'], estuchesRef], // Estuche de viaje - Cartón compacto
@@ -85,7 +85,7 @@ export default function Home() {
     [['ex kit.jpg']], // Exhibidor fibrofacil laminado
     [['IMG_9520.jpg']], // Exhibidor fibrofacil laminado
     [['343813454_191905643672724_808407925404404510_n.jpg']], // Exhibidor fibrofacil laminado
-    [['IMG_6824.jpg', '1234567.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_3c461e8b.jpg', '123.jpg', '123456.jpg', '0123456.jpg', '12345.jpg', '1234.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_24bdbbaf.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_72d1f572.jpg'], personalizadosRef],
+    [['IMG_6824.jpg', '1234567.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_3c461e8b.jpg', '123.jpg', 'IMG_1509.jpg', '123456.jpg', '0123456.jpg', '12345.jpg', '1234.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_24bdbbaf.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_72d1f572.jpg'], personalizadosRef],
     [['']], 
     [['']],
   ];
