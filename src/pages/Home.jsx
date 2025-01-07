@@ -125,7 +125,7 @@ export default function Home() {
         <div className='navBar__tortuLogoContainer'>
           <img src='/logoTortu.png' onClick={() => window.scrollTo(0, 0)} alt='Tortu Logo' />
         </div>
-        <span>Compra mínima 300 uds.</span>
+        <span className='navBar__compraMinima'>Compra mínima 300 uds.</span>
       </div>
 
       <div className='menuTilesContainer'>
