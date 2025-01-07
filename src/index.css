@@ -172,12 +172,14 @@ body {
 .navBar{
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
   width: 100%;
   background-color: #252525;
   z-index: 2;
+  flex: 1;
+  padding: 0 10px;
 }
 
 .navBar__Button {
@@ -192,10 +194,13 @@ body {
 }
 
 .navBar__tortuLogoContainer{
-  margin-top: -10px;
+  position: absolute;
   width: 30px;
   height: 30px;
   cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -10px;
 }
 
 

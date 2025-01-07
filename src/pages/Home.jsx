@@ -119,12 +119,13 @@ export default function Home() {
   return (
     <main>
       <div className='navBar'>
+        <Link to='/contact'>
+          Contacto
+        </Link>
         <div className='navBar__tortuLogoContainer'>
           <img src='/logoTortu.png' onClick={() => window.scrollTo(0, 0)} alt='Tortu Logo' />
         </div>
-        <Link to='/contact' className='navBar__Button'>
-          Contacto
-        </Link>
+        <span>Compra mínima 300 uds.</span>
       </div>
 
       <div className='menuTilesContainer'>
