@@ -203,17 +203,6 @@ body {
   margin-top: -10px;
 }
 
-@media (max-width: 767px) {
-  .navBar__compraMinima {
-    max-width: 140px;
-    word-break: break-word;
-    white-space: normal;
-    text-align: center;
-    font-size: 14px;
-  }
-}
-
-
 .menuTilesContainer{
   padding-top: 61px;
 }
@@ -267,12 +256,9 @@ body {
 .genericCard{
   display: flex;
   flex-direction: column;
-
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-
-
   color:black;
   width: 95%;
   max-width: 500px;
@@ -280,8 +266,11 @@ body {
   background-color: white;
   border-radius: 15px;
   margin: 30px 0px;
-
   scroll-margin: 80px;
+  @media (max-width: 1049px) {
+    .genericCard {
+      height: fit-content;
+    }
 }
 
 .genericCard h1{
@@ -349,6 +338,7 @@ body {
 }
 
 .mySwiper{
+  height: fit-content;
   max-height: 500px;
 }
 
