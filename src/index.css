@@ -290,10 +290,10 @@ body {
   border-radius: 15px;
   margin: 30px 0px;
   scroll-margin: 80px;
-  @media (max-width: 1049px) {
-    .genericCard {
-      height: fit-content;
-    }
+}
+@media (max-width: 1049px) {
+  .genericCard {
+    height: fit-content;
   }
 }
 
