@@ -205,6 +205,7 @@ body {
   z-index: 2;
   flex: 1;
   padding: 0 10px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0.1) 100%);
 }
 
 .navBar__Button {
@@ -233,7 +234,9 @@ body {
 }
 
 .menuTile {
+  margin-bottom:4px;
   font-size: 1.25em;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,6 +244,8 @@ body {
   width: 100%;
   background-color: green;
   transition: all 0.2s ease-in-out;
+  background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.2) 100%);
+
 }
 
 .menuTile:hover {
@@ -364,6 +369,10 @@ body {
 .mySwiper {
   height: fit-content;
   max-height: 500px;
+}
+
+.swiper-pagination-bullet-active {
+  bottom: 0;
 }
 
 .fundacionContainer {
