@@ -82,6 +82,9 @@ export default function Home() {
     [['IMG_9668.jpg', 'IMG_0240.jpg']], // Estuche góndola - Cartulina
     [['IMG_0692.jpg']], // Estuche góndola - Cartulina
     [['IMG_9470.jpg', 'photo_514HG1063016110992029_y.png'], exhibidoresRef], // Exhibidor fibrofacil laminado
+    
+    
+    
     [['IMG_6824.jpg', '1234567.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_3c461e8b.jpg', '123.jpg', 'IMG_1509.jpg', '123456.jpg', '0123456.jpg', '12345.jpg', '1234.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_24bdbbaf.jpg', 'Imagen de WhatsApp 2024-11-21 a las 12.01.25_72d1f572.jpg'], personalizadosRef],
     [['']], 
     [['']],
