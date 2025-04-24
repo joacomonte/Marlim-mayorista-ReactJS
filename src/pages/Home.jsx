@@ -100,7 +100,7 @@ export default function Home() {
     const fetchData = async () => {
       const data = await fetchDataFromSpreadsheet(
         // spread,
-        import.meta.env.VITE_SPREADSHEET_ID,
+        import.meta.env.SPREADSHEET_ID,
         'Hoja 1'
         // key
         // import.meta.env.VITE_API_KEY
